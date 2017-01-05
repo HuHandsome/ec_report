@@ -7,12 +7,19 @@
 </head>
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 600px;height:400px;"></div>
+    <div id="main" style="width: 300px;height:200px;"></div>
     <script type="text/javascript">
         // 初始化echarts
         var myChart = echarts.init(document.getElementById('main'));
 
         option = {
+        		backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
+                    offset: 0,
+                    color: '#f7f8fa'
+                }, {
+                    offset: 1,
+                    color: '#cdd0d5'
+                }]),
         	    tooltip: {
         	        trigger: 'item',
         	        formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -60,10 +67,10 @@
         	            	normal:{
 		        	            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
 		        	            	  offset: 0,
-		        	            	  color: '#cfa1fd' // 0% 处的颜色
+		        	            	  color: '#FFFFFF' // 0% 处的颜色
 		        	            	}, {
 		        	            	  offset: 1,
-		        	            	  color: '#935bf0' // 100% 处的颜色
+		        	            	  color: '#000000' // 100% 处的颜色
 		        	            	}], false)
         	            	}
         	            },
