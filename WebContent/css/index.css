@@ -1,0 +1,40 @@
+.container {
+  padding: 0.37453184em;
+  box-sizing: border-box;
+}
+.container .header {
+  width: 100%;
+  height: 9.13857678em;
+  background-image: url("../img/top_bj.png");
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+.container .header .logo {
+  width: 8.23970037em;
+  height: 8.23970037em;
+  overflow: hidden;
+  background: url("../img/nave.png") no-repeat;
+  background-position: 0.56179775em 3.93258427em;
+  background-size: 20% 20%;
+}
+.container .header .logo a {
+  width: 8.23970037em;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  font-family: "黑体";
+  font-size: 1.34831461em;
+  position: relative;
+  margin-left: 4.11985019em;
+  margin-top: 1.31086142em;
+}
+.container .header .logo a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/logo.png") no-repeat;
+  background-size: contain;
+  top: 0;
+  left: -2.99625468em;
+}

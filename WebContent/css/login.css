@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+html,body{height: 100%;}
+body{background-image: url("../img/beiji.jpg");background-color: #0A1A30;background-repeat: no-repeat;background-position: center;background-size: cover;min-height: 720px;}
+
+.main{position: absolute;top: 50%;left: 50%;width: 975px;height: 497px;margin: -330px 0 0 -487px; background-image:url("../img/kuan.png");background-repeat: no-repeat;background-position: center;}
+.main h1{margin-top: -5px; color: #fff;text-align: center;font-size: 40px;}
+.main h1 span{background: #0A2345;font-family: "黑体";}
+.main h2{margin-top: 25px; color: #05A0F9;text-align: center;font-size: 30px;font-family: "黑体";}
+.login_box{overflow: hidden;margin:111px 0 0 203px;}
+.logo{float: left;}
+.form{float: left;margin-left: 70px;padding-top: 20px;}
+input::-webkit-input-placeholder{color: #2BB2EA;}
+input:-moz-placeholder{color:#2BB2EA;}
+input::-moz-placeholder{color:#2BB2EA;}
+input:-ms-input-placeholder{color:#2BB2EA;}
+.form input{display: block;width: 300px;height: 42px;margin-bottom: 20px;padding: 0 10px;line-height: 42px;background: #0D3E71;border: #1F4596 1px solid;color: #2BB2EA;}
+.pwdHandle{overflow: hidden;}
+.myCheckbox{float: left;padding-left: 20px; background: url("../img/fxk.png") no-repeat 0 center;cursor: pointer;color: #AAACBA;}
+.myCheckbox.checked{background: url("../img/fxk_on.png") no-repeat 0 center;}
+.findPass{float: right;color: #AAACBA;}
+.login_btn{position: absolute;width: 100%;bottom: 6px; text-align: center;}
+.login_btn span{display: inline-block;width: 124px;height: 48px; background: url("../img/dlbnt.png") no-repeat;cursor: pointer;}
+.login_btn span:hover{ background: url("../img/dlbnt_on.png") no-repeat;}
+
+.footer{position: absolute;width: 100%;bottom: 5px;}
+.footer p{text-align: center;color: #AAACBA;font-size: 12px;}
+
+@media screen and (max-height: 720px) {
+    .main{top:20px;margin-top: 0;}
+    .footer{top:695px;}
+    body{background-size: inherit;}
+}
