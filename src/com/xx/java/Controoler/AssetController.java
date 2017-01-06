@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.xx.java.utils.RequestUtils;
+
 /**
  * @version 创建时间：2017年1月6日 下午4:59:15
  * @Description 详情：获取资产情况，包括资产总数、正常资产、问题资产、问题单位
@@ -33,7 +35,7 @@ public class AssetController {
 	@RequestMapping("/headData")
 	public String headData() throws IOException {
 		String queryId = "face5001-dd5f-4492-ae64-e08e971bed2d";
-
+		RequestUtils.call(path, "");
 		return "";
 	}
 

@@ -2,10 +2,11 @@ package com.xx.java.utils;
 
 import java.io.IOException;
 
-import com.squareup.okhttp.Headers;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
+
+import okhttp3.Call;
+import okhttp3.Request;
 
 /**
  * 调用Http接口
@@ -15,21 +16,26 @@ import com.squareup.okhttp.Response;
 public class RequestUtils {
 	
 	public static String call(String url, String param) throws IOException{
-		OkHttpClient client = new OkHttpClient();
+		String result = null;
+		StringCallback callBack = new StringCallback()
+        {
+			@Override
+			public void onError(Call arg0, Exception arg1, int arg2) {
+				
+			}
 
-		Request request = new Request.Builder().url("http://www.baidu.com").build();
-
-		Response response = client.newCall(request).execute();
-		if (!response.isSuccessful()) {
-			throw new IOException("服务器端错误: " + response);
-		}
-
-		Headers responseHeaders = response.headers();
-		for (int i = 0; i < responseHeaders.size(); i++) {
-			System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
-		}
-
-		System.out.println(response.body().string());
-		return response.body().string();
+			@Override
+			public void onResponse(String arg0, int arg1) {
+				System.out.println(arg0);
+				System.out.println(arg1);
+			}
+        };
+		 OkHttpUtils
+		    .post()
+		    .url(url)
+		    .addParams("username", "hyman")
+		    .addParams("password", "123")
+		    .build().execute(callBack);
+		 return "";
 	}
 }
