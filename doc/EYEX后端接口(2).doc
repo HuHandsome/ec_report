@@ -1,0 +1,1425 @@
+
+        <html xmlns:v="urn:schemas-microsoft-com:vml"
+        xmlns:o="urn:schemas-microsoft-com:office:office"
+        xmlns:w="urn:schemas-microsoft-com:office:word"
+        xmlns="http://www.w3.org/TR/REC-html40">
+        <head><meta http-equiv=Content-Type content="text/html;  
+        charset=utf-8">
+        <style type="text/css">
+            table  
+            {  
+                border-collapse: collapse;
+                border: none;  
+                width: 100%;  
+            }  
+            td  
+            {  
+                border: solid #CCC 1px;  
+            }  
+            .codestyle{
+                word-break: break-all;
+                background:silver;mso-highlight:silver;
+            }
+        </style>
+        <meta name=ProgId content=Word.Document>
+        <meta name=Generator content="Microsoft Word 11">
+        <meta name=Originator content="Microsoft Word 11">
+        <xml><w:WordDocument><w:View>Print</w:View></xml></head>
+        <body><h1>1、接口一</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取资产情况，包括资产总数、正常资产、问题资产、问题单位</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/query</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">quryid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">face5001-dd5f-4492-ae64-e08e971bed2d</td>
+<td>查询编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmStart</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmEnd</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;n&quot;: &quot;资产总数&quot;,
+      &quot;v&quot;: 12359
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;n&quot;: &quot;正常资产&quot;,
+      &quot;v&quot;: 12000
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;n&quot;: &quot;问题资产&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 4,
+      &quot;n&quot;: &quot;问题单位&quot;,
+      &quot;v&quot;: 59
+    }
+  ],
+  &quot;recordsTotal&quot;: &quot;4&quot;,
+  &quot;recordsFiltered&quot;: &quot;4&quot;
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">data</td>
+<td style="text-align: left;">table</td>
+<td>id:编号，n：名称；v：数量</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+查询失败返回 {}</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h1>2、接口二</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取威胁情况，包括威胁总数、漏洞威胁、黑链威胁、攻击威胁、故障威胁、其他威胁</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/query</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">quryid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">f4449cc4-e9c4-4f14-9a58-c2be3e6a618f</td>
+<td>查询编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmStart</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmEnd</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;n&quot;: &quot;威胁总数&quot;,
+      &quot;v&quot;: 12350
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;n&quot;: &quot;漏洞威胁&quot;,
+      &quot;v&quot;: 2000
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;n&quot;: &quot;黑链威胁&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 4,
+      &quot;n&quot;: &quot;攻击威胁&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;n&quot;: &quot;故障威胁&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 6,
+      &quot;n&quot;: &quot;其他威胁&quot;,
+      &quot;v&quot;: 359
+    }
+  ],
+  &quot;recordsTotal&quot;: &quot;6&quot;,
+  &quot;recordsFiltered&quot;: &quot;6&quot;
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">data</td>
+<td style="text-align: left;">table</td>
+<td>id:编号，n：名称；v：数量</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+查询失败返回 {}</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h1>3、接口三</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取威胁统计情况，包括高危数量、中危数量、低危数量</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/query</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">quryid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">23286c2b-c1ce-46ec-893b-c5232948b29f</td>
+<td>查询编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmStart</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmEnd</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;n&quot;: &quot;高危数量&quot;,
+      &quot;v&quot;: 12000
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;n&quot;: &quot;中危数量&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;n&quot;: &quot;低危数量&quot;,
+      &quot;v&quot;: 59
+    }
+  ],
+  &quot;recordsTotal&quot;: &quot;3&quot;,
+  &quot;recordsFiltered&quot;: &quot;3&quot;
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">data</td>
+<td style="text-align: left;">table</td>
+<td>id:编号，n：名称；v：数量</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+查询失败返回 {}</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h1>4、接口四</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取攻击分类情况，包括但不限于SQL注入攻击、XSS攻击、目录遍历等</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/query</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">quryid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">f1aa422b-a9b2-4c50-9813-e1c4b4bf429e</td>
+<td>查询编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">start</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认0</td>
+<td>返回数据的开始条</td>
+</tr>
+<tr>
+<td style="text-align: left;">length</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认10</td>
+<td>返回数据的条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmStart</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmEnd</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;n&quot;: &quot;SQL注入攻击&quot;,
+      &quot;v&quot;: 2000
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;n&quot;: &quot;XSS攻击&quot;,
+      &quot;v&quot;: 269
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;n&quot;: &quot;暴力破解攻击&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 4,
+      &quot;n&quot;: &quot;目录遍历攻击&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;n&quot;: &quot;不安全的对象&quot;,
+      &quot;v&quot;: 269
+    }
+  ],
+  &quot;recordsTotal&quot;: &quot;5&quot;,
+  &quot;recordsFiltered&quot;: &quot;5&quot;
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">data</td>
+<td style="text-align: left;">table</td>
+<td>id:编号，n：名称；v：数量</td>
+</tr>
+<tr>
+<td style="text-align: left;">recordsTotal</td>
+<td style="text-align: left;">int</td>
+<td>总条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">recordsFiltered</td>
+<td style="text-align: left;">int</td>
+<td>过滤后的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+查询失败返回 {}</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h1>5、接口五</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取资产分类情况，包括但不限于Apache、Wordpress、Struts2、Discuz等</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/query</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">quryid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">9add8039-5a09-408f-afa8-44de60919e4d</td>
+<td>查询编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">start</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认0</td>
+<td>返回数据的开始条</td>
+</tr>
+<tr>
+<td style="text-align: left;">length</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认10</td>
+<td>返回数据的条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmStart</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmEnd</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;n&quot;: &quot;Apache&quot;,
+      &quot;v&quot;: 2000
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;n&quot;: &quot;Wordpress&quot;,
+      &quot;v&quot;: 269
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;n&quot;: &quot;Struts2&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 4,
+      &quot;n&quot;: &quot;Discuz&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;n&quot;: &quot;Debian&quot;,
+      &quot;v&quot;: 269
+    }
+  ],
+  &quot;recordsTotal&quot;: &quot;5&quot;,
+  &quot;recordsFiltered&quot;: &quot;5&quot;
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">data</td>
+<td style="text-align: left;">table</td>
+<td>id:编号，n：名称；v：数量</td>
+</tr>
+<tr>
+<td style="text-align: left;">recordsTotal</td>
+<td style="text-align: left;">int</td>
+<td>总条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">recordsFiltered</td>
+<td style="text-align: left;">int</td>
+<td>过滤后的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+查询失败返回 {}</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h1>6、接口六</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取威胁的详情列表，包括IP/域名、威胁类型、威胁源、威胁信息</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/query</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">quryid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">2360c1b2-13f1-4906-aa38-48108c4ccbc8</td>
+<td>查询编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">start</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认0</td>
+<td>返回数据的开始条</td>
+</tr>
+<tr>
+<td style="text-align: left;">length</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认10</td>
+<td>返回数据的条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmStart</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmEnd</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>结束时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">cid</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认0</td>
+<td>要查询的资产的编号</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 0,
+      &quot;n&quot;: &quot;www.baidu.com&quot;,
+      &quot;p&quot;: &quot;117.011218,36.667308&quot;,
+      &quot;t&quot;:&quot;故障威胁&quot;,
+      &quot;i&quot;:&quot;网站无法正常响应&quot;
+    },
+    {
+      &quot;id&quot;: 1,
+      &quot;n&quot;: &quot;www.ip138.com&quot;,
+      &quot;p&quot;: &quot;116.396795,39.974898&quot;,
+      &quot;t&quot;:&quot;攻击威胁&quot;,
+      &quot;s&quot;:&quot;1.2.3.4&quot;,
+      &quot;sp&quot;: &quot;116.967035,36.723143&quot;,
+      &quot;i&quot;:&quot;SQL注入攻击&quot;
+    },
+  ],
+  &quot;recordsTotal&quot;: &quot;2&quot;,
+  &quot;recordsFiltered&quot;: &quot;2&quot;
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">data</td>
+<td style="text-align: left;">table</td>
+<td>id:编号，n：IP/域名，p：威胁发生的位置(可能没有)，t：威胁类型 ，s：威胁源(可能没有威胁源)，sp：威胁源的位置(可能没有)，i：威胁信息</td>
+</tr>
+<tr>
+<td style="text-align: left;">recordsTotal</td>
+<td style="text-align: left;">int</td>
+<td>总条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">recordsFiltered</td>
+<td style="text-align: left;">int</td>
+<td>过滤后的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+查询失败返回 {}</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h1>7、接口七</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取漏洞分类情况，包括但不限于SQL注入、XSS、目录遍历等</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/query</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">quryid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">e92ac98f-2e5d-43af-ad6a-4e07ac44fb6e</td>
+<td>查询编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">start</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认0</td>
+<td>返回数据的开始条</td>
+</tr>
+<tr>
+<td style="text-align: left;">length</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认10</td>
+<td>返回数据的条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmStart</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmEnd</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;n&quot;: &quot;SQL注入&quot;,
+      &quot;v&quot;: 2000
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;n&quot;: &quot;XSS&quot;,
+      &quot;v&quot;: 269
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;n&quot;: &quot;暴力破解&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 4,
+      &quot;n&quot;: &quot;目录遍历&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;n&quot;: &quot;不安全的对象&quot;,
+      &quot;v&quot;: 269
+    }
+  ],
+  &quot;recordsTotal&quot;: &quot;5&quot;,
+  &quot;recordsFiltered&quot;: &quot;5&quot;
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">data</td>
+<td style="text-align: left;">table</td>
+<td>id:编号，n：名称；v：数量</td>
+</tr>
+<tr>
+<td style="text-align: left;">recordsTotal</td>
+<td style="text-align: left;">int</td>
+<td>总条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">recordsFiltered</td>
+<td style="text-align: left;">int</td>
+<td>过滤后的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+查询失败返回 {}</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h1>8、接口八</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>检索资产情况，通过输入自定义语法，检索出相应的资产</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/query</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">quryid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">83897eb4-7b57-432b-a20d-05aa87dc57ef</td>
+<td>查询编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">start</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认0</td>
+<td>返回数据的开始条</td>
+</tr>
+<tr>
+<td style="text-align: left;">length</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">默认10</td>
+<td>返回数据的条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">qbase64</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;"></td>
+<td>base64编码后的查询语句</td>
+</tr>
+<tr>
+<td style="text-align: left;">extra</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">header,body</td>
+<td>选择返回的额外数据</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmStart</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmEnd</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;recordsTotal&quot;: 12931,
+    &quot;query&quot;: &quot;*&quot;,
+    &quot;recordsFiltered&quot;: 12931,
+    &quot;qbase64&quot;: &quot;Kg%3D%3D&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;tags&quot;: [
+                &quot;Microsoft ASP.NET&quot;,
+                &quot;PHP&quot;,
+                &quot;Windows Server&quot;,
+                &quot;IIS&quot;
+            ],
+            &quot;url&quot;: &quot;http://shiqiang.zoucheng.gov.cn&quot;,
+            &quot;ip&quot;: &quot;115.29.141.18&quot;,
+            &quot;title&quot;: &quot;邹城市石墙镇&quot;,
+            &quot;host&quot;: &quot;shiqiang.zoucheng.gov.cn&quot;,
+            &quot;tm&quot;: &quot;2016-08-23 10:24:04&quot;,
+            &quot;country&quot;: &quot;cn&quot;,
+            &quot;_id&quot;: &quot;shiqiang.zoucheng.gov.cn&quot;
+        },
+        {
+            &quot;tags&quot;: [
+                &quot;jQuery&quot;,
+                &quot;Microsoft ASP.NET&quot;,
+                &quot;Windows Server&quot;,
+                &quot;IIS&quot;
+            ],
+            &quot;url&quot;: &quot;http://zjj.rencheng.gov.cn&quot;,
+            &quot;ip&quot;: &quot;117.132.9.227&quot;,
+            &quot;title&quot;: &quot;网站首页-住建局&quot;,
+            &quot;host&quot;: &quot;zjj.rencheng.gov.cn&quot;,
+            &quot;tm&quot;: &quot;2016-08-23 10:24:00&quot;,
+            &quot;country&quot;: &quot;cn&quot;,
+            &quot;_id&quot;: &quot;zjj.rencheng.gov.cn&quot;
+        },
+        {
+            &quot;tags&quot;: [
+                &quot;jQuery&quot;,
+                &quot;Microsoft ASP.NET&quot;,
+                &quot;Windows Server&quot;,
+                &quot;IIS&quot;
+            ],
+            &quot;url&quot;: &quot;http://hszh.rencheng.gov.cn&quot;,
+            &quot;ip&quot;: &quot;117.132.9.227&quot;,
+            &quot;title&quot;: &quot;网站首页-红十字会&quot;,
+            &quot;host&quot;: &quot;hszh.rencheng.gov.cn&quot;,
+            &quot;tm&quot;: &quot;2016-08-23 10:24:01&quot;,
+            &quot;country&quot;: &quot;cn&quot;,
+            &quot;_id&quot;: &quot;hszh.rencheng.gov.cn&quot;
+        },
+        {
+            &quot;tags&quot;: [
+                &quot;Microsoft ASP.NET&quot;,
+                &quot;Windows Server&quot;,
+                &quot;IIS&quot;
+            ],
+            &quot;url&quot;: &quot;http://fgj.hedong.cn&quot;,
+            &quot;ip&quot;: &quot;61.156.25.21&quot;,
+            &quot;title&quot;: &quot;临沂河东发改信息网&quot;,
+            &quot;host&quot;: &quot;fgj.hedong.cn&quot;,
+            &quot;tm&quot;: &quot;2016-08-23 10:25:15&quot;,
+            &quot;country&quot;: &quot;cn&quot;,
+            &quot;_id&quot;: &quot;fgj.hedong.cn&quot;
+        },
+        {
+            &quot;tags&quot;: [
+                &quot;Microsoft ASP.NET&quot;,
+                &quot;PHP&quot;,
+                &quot;Windows Server&quot;,
+                &quot;IIS&quot;
+            ],
+            &quot;url&quot;: &quot;http://huanbaoju.zoucheng.gov.cn&quot;,
+            &quot;ip&quot;: &quot;115.29.141.18&quot;,
+            &quot;title&quot;: &quot;邹城市环保局&quot;,
+            &quot;host&quot;: &quot;huanbaoju.zoucheng.gov.cn&quot;,
+            &quot;tm&quot;: &quot;2016-08-23 10:25:16&quot;,
+            &quot;country&quot;: &quot;cn&quot;,
+            &quot;_id&quot;: &quot;huanbaoju.zoucheng.gov.cn&quot;
+        },
+        {
+            &quot;tags&quot;: [
+                &quot;jQuery&quot;,
+                &quot;Ink&quot;
+            ],
+            &quot;url&quot;: &quot;http://www.linyichina.gov.cn&quot;,
+            &quot;ip&quot;: &quot;219.146.199.142&quot;,
+            &quot;title&quot;: &quot;临沂市商务局&quot;,
+            &quot;host&quot;: &quot;www.linyichina.gov.cn&quot;,
+            &quot;tm&quot;: &quot;2016-08-23 10:25:16&quot;,
+            &quot;country&quot;: &quot;cn&quot;,
+            &quot;_id&quot;: &quot;www.linyichina.gov.cn&quot;
+        },
+        {
+            &quot;tags&quot;: [
+                &quot;Microsoft ASP.NET&quot;,
+                &quot;Windows Server&quot;,
+                &quot;IIS&quot;
+            ],
+            &quot;url&quot;: &quot;http://www.tszj.gov.cn&quot;,
+            &quot;ip&quot;: &quot;112.90.144.228&quot;,
+            &quot;title&quot;: &quot;泰安市泰山区质量技术监督局&quot;,
+            &quot;host&quot;: &quot;www.tszj.gov.cn&quot;,
+            &quot;tm&quot;: &quot;2016-08-23 10:25:32&quot;,
+            &quot;country&quot;: &quot;cn&quot;,
+            &quot;_id&quot;: &quot;www.tszj.gov.cn&quot;
+        },
+        {
+            &quot;tags&quot;: [
+                &quot;jQuery&quot;,
+                &quot;Nginx&quot;,
+                &quot;Microsoft ASP.NET&quot;,
+                &quot;Windows Server&quot;,
+                &quot;IIS&quot;
+            ],
+            &quot;url&quot;: &quot;http://www.xtjjjc.gov.cn&quot;,
+            &quot;ip&quot;: &quot;111.17.214.6&quot;,
+            &quot;title&quot;: &quot;新泰市纪委监察局网站&quot;,
+            &quot;host&quot;: &quot;www.xtjjjc.gov.cn&quot;,
+            &quot;tm&quot;: &quot;2016-08-23 10:25:33&quot;,
+            &quot;country&quot;: &quot;cn&quot;,
+            &quot;_id&quot;: &quot;www.xtjjjc.gov.cn&quot;
+        },
+        {
+            &quot;tags&quot;: [
+                &quot;Microsoft ASP.NET&quot;,
+                &quot;Windows Server&quot;,
+                &quot;IIS&quot;
+            ],
+            &quot;url&quot;: &quot;http://www.lckfq.gov.cn&quot;,
+            &quot;ip&quot;: &quot;222.133.244.100&quot;,
+            &quot;title&quot;: &quot;国家级聊城经济技术开发区&quot;,
+            &quot;host&quot;: &quot;www.lckfq.gov.cn&quot;,
+            &quot;tm&quot;: &quot;2016-08-23 10:25:13&quot;,
+            &quot;country&quot;: &quot;cn&quot;,
+            &quot;_id&quot;: &quot;www.lckfq.gov.cn&quot;
+        },
+        {
+            &quot;tags&quot;: [
+                &quot;jQuery&quot;,
+                &quot;Microsoft ASP.NET&quot;,
+                &quot;Windows Server&quot;,
+                &quot;IIS&quot;
+            ],
+            &quot;url&quot;: &quot;http://www.sdsx.gov.cn&quot;,
+            &quot;ip&quot;: &quot;218.56.0.26&quot;,
+            &quot;title&quot;: &quot;莘县人民政府门户网&quot;,
+            &quot;host&quot;: &quot;www.sdsx.gov.cn&quot;,
+            &quot;tm&quot;: &quot;2016-08-23 10:25:14&quot;,
+            &quot;country&quot;: &quot;cn&quot;,
+            &quot;_id&quot;: &quot;www.sdsx.gov.cn&quot;
+        }
+    ]
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">data</td>
+<td style="text-align: left;">table</td>
+<td>id:编号，n：名称；v：数量</td>
+</tr>
+<tr>
+<td style="text-align: left;">recordsTotal</td>
+<td style="text-align: left;">int</td>
+<td>总条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">recordsFiltered</td>
+<td style="text-align: left;">int</td>
+<td>过滤后的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+查询失败返回 {}</p>
+<p><strong>调用例子</strong>
+<img src="http://www.showdoc.cc/home/common/visitfile/sign/f35575516b4b86395d81436d8107643b?showdoc=.jpg" alt="" /> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h1>9、接口九</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>统计检索资产的情况，通过输入自定义语法，对检索出的资产进行统计</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/query</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">quryid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">2a72e7d9-4fce-4025-a498-3783d286b15a</td>
+<td>查询编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">qbase64</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;"></td>
+<td>base64编码后的查询语句</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmStart</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmEnd</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+    &quot;areas_name&quot;: [
+
+    ],
+    &quot;users&quot;: [
+        {
+            &quot;count&quot;: 17,
+            &quot;end&quot;: &quot;119.163.121.255&quot;,
+            &quot;name&quot;: &quot;凯哥&quot;,
+            &quot;start&quot;: &quot;119.163.121.0&quot;,
+            &quot;raw&quot;: &quot;凯哥&quot;,
+            &quot;range&quot;: [
+                [
+                    &quot;119.163.121.0&quot;,
+                    &quot;119.163.121.255&quot;
+                ]
+            ],
+            &quot;freq&quot;: 0.13
+        }
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;count&quot;: 7255,
+            &quot;freq&quot;: 56.1,
+            &quot;name&quot;: &quot;jQuery&quot;
+        },
+        {
+            &quot;count&quot;: 5585,
+            &quot;freq&quot;: 43.19,
+            &quot;name&quot;: &quot;Apache&quot;
+        },
+        {
+            &quot;count&quot;: 5488,
+            &quot;freq&quot;: 42.44,
+            &quot;name&quot;: &quot;PHP&quot;
+        },
+        {
+            &quot;count&quot;: 3215,
+            &quot;freq&quot;: 24.86,
+            &quot;name&quot;: &quot;Nginx&quot;
+        },
+        {
+            &quot;count&quot;: 2282,
+            &quot;freq&quot;: 17.64,
+            &quot;name&quot;: &quot;Google Font API&quot;
+        },
+        {
+            &quot;count&quot;: 2174,
+            &quot;freq&quot;: 16.81,
+            &quot;name&quot;: &quot;WordPress&quot;
+        },
+        {
+            &quot;count&quot;: 2123,
+            &quot;freq&quot;: 16.41,
+            &quot;name&quot;: &quot;Windows Server&quot;
+        },
+        {
+            &quot;count&quot;: 1876,
+            &quot;freq&quot;: 14.5,
+            &quot;name&quot;: &quot;IIS&quot;
+        },
+        {
+            &quot;count&quot;: 1577,
+            &quot;freq&quot;: 12.19,
+            &quot;name&quot;: &quot;Twitter Bootstrap&quot;
+        },
+        {
+            &quot;count&quot;: 1556,
+            &quot;freq&quot;: 12.03,
+            &quot;name&quot;: &quot;Microsoft ASP.NET&quot;
+        },
+        {
+            &quot;count&quot;: 1369,
+            &quot;freq&quot;: 10.58,
+            &quot;name&quot;: &quot;Font Awesome&quot;
+        },
+        ...
+        ...
+        {
+            &quot;count&quot;: 1,
+            &quot;freq&quot;: 0,
+            &quot;name&quot;: &quot;trs_wcm&quot;
+        },
+        {
+            &quot;count&quot;: 1,
+            &quot;freq&quot;: 0,
+            &quot;name&quot;: &quot;xui&quot;
+        },
+        {
+            &quot;count&quot;: 1,
+            &quot;freq&quot;: 0,
+            &quot;name&quot;: &quot;xxxx&quot;
+        },
+        {
+            &quot;count&quot;: 1,
+            &quot;freq&quot;: 0,
+            &quot;name&quot;: &quot;亿邮&quot;
+        },
+        {
+            &quot;count&quot;: 1,
+            &quot;freq&quot;: 0,
+            &quot;name&quot;: &quot;网易企业邮箱&quot;
+        },
+        {
+            &quot;count&quot;: 1,
+            &quot;freq&quot;: 0,
+            &quot;name&quot;: &quot;逐浪zoomla&quot;
+        }
+    ],
+    &quot;tags_name&quot;: [
+
+    ],
+    &quot;totalTag&quot;: 54140,
+    &quot;manager&quot;: [
+
+    ],
+    &quot;totalIP&quot;: 9423,
+    &quot;total&quot;: 12931,
+    &quot;areas&quot;: [
+        {
+            &quot;count&quot;: 16,
+            &quot;end&quot;: &quot;58.58.176.255&quot;,
+            &quot;name&quot;: &quot;日照市政府&quot;,
+            &quot;start&quot;: &quot;58.58.176.0&quot;,
+            &quot;raw&quot;: &quot;日照市政府&quot;,
+            &quot;range&quot;: [
+                [
+                    &quot;58.58.176.0&quot;,
+                    &quot;58.58.176.255&quot;
+                ]
+            ],
+            &quot;freq&quot;: 0.12
+        },
+        {
+            &quot;count&quot;: 144,
+            &quot;end&quot;: &quot;119.163.121.255&quot;,
+            &quot;name&quot;: &quot;济南市政府&quot;,
+            &quot;start&quot;: &quot;119.163.121.0&quot;,
+            &quot;raw&quot;: &quot;济南市政府&quot;,
+            &quot;range&quot;: [
+                [
+                    &quot;119.163.121.0&quot;,
+                    &quot;119.163.121.255&quot;
+                ],
+                [
+                    &quot;218.57.0.0&quot;,
+                    &quot;218.57.255.255&quot;
+                ]
+            ],
+            &quot;freq&quot;: 1.11
+        },
+        {
+            &quot;count&quot;: 55,
+            &quot;end&quot;: &quot;202.110.193.255&quot;,
+            &quot;name&quot;: &quot;青岛市政府&quot;,
+            &quot;start&quot;: &quot;202.110.193.0&quot;,
+            &quot;raw&quot;: &quot;青岛市政府&quot;,
+            &quot;range&quot;: [
+                [
+                    &quot;202.110.193.0&quot;,
+                    &quot;202.110.193.255&quot;
+                ]
+            ],
+            &quot;freq&quot;: 0.42
+        }
+    ]
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">tags</td>
+<td style="text-align: left;">table</td>
+<td>标签统计  count:数量，freq：频率；name：名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">users</td>
+<td style="text-align: left;">table</td>
+<td>人员统计  count:数量，freq：频率；name：名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">areas</td>
+<td style="text-align: left;">table</td>
+<td>区域统计  count:数量，freq：频率；name：名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">total</td>
+<td style="text-align: left;">int</td>
+<td>网站总数</td>
+</tr>
+<tr>
+<td style="text-align: left;">totalIP</td>
+<td style="text-align: left;">int</td>
+<td>IP总数</td>
+</tr>
+<tr>
+<td style="text-align: left;">totalTag</td>
+<td style="text-align: left;">int</td>
+<td>资产总数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+查询失败返回 {}</p>
+<p><strong>调用例子</strong>
+<img src="http://www.showdoc.cc/home/common/visitfile/sign/631c459714105448fbe0a9de6e562834?showdoc=.jpg" alt="" /></p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h1>10、接口十</h1><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取前十危险资产</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/query</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">quryid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">6188fd63-edb9-4e98-8ec8-df48871ab248</td>
+<td>查询编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmStart</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">tmEnd</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">时间戳</td>
+<td style="text-align: left;">默认0</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<table width='100%' class='codestyle'><pre><code>{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;n&quot;: &quot;山东统计局&quot;,
+      &quot;v&quot;: 12350
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;n&quot;: &quot;青岛海洋局&quot;,
+      &quot;v&quot;: 2000
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;n&quot;: &quot;青岛税务局&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 4,
+      &quot;n&quot;: &quot;青岛海尔&quot;,
+      &quot;v&quot;: 359
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;n&quot;: &quot;青岛啤酒&quot;,
+      &quot;v&quot;: 359
+    }
+  ],
+  &quot;recordsTotal&quot;: &quot;5&quot;,
+  &quot;recordsFiltered&quot;: &quot;5&quot;
+}</code></pre></table>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead><tr style='background-color: rgb(0, 136, 204); color: rgb(255, 255, 255);'>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">data</td>
+<td style="text-align: left;">table</td>
+<td>id:编号，n：名称；v：威胁评分</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+查询失败返回 {}</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></body></html>
