@@ -1,7 +1,10 @@
 package com.xx.java.Controoler;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,9 +36,15 @@ public class AssetController {
 	 */
 	@ResponseBody
 	@RequestMapping("/headData")
-	public String headData() throws IOException {
+	public String headData(String tmStart, String tmEnd) throws IOException {
 		String queryId = "face5001-dd5f-4492-ae64-e08e971bed2d";
-		RequestUtils.call(path, "");
+		Map<String, String> param = new HashMap<String, String>();
+		param.put("quryid", queryId);
+		if(StringUtils.isNoneBlank(tmStart) && StringUtils.isNoneBlank(tmEnd)){
+			param.put("tmStart", tmStart);
+			param.put("tmEnd", tmEnd);
+		}
+		RequestUtils.callHttp(path, param);
 		return "";
 	}
 

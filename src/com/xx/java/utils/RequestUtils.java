@@ -1,12 +1,11 @@
 package com.xx.java.utils;
 
 import java.io.IOException;
+import java.util.Map;
 
-import com.zhy.http.okhttp.OkHttpUtils;
-import com.zhy.http.okhttp.callback.StringCallback;
-
-import okhttp3.Call;
-import okhttp3.Request;
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpException;
+import org.apache.commons.httpclient.methods.PostMethod;
 
 /**
  * 调用Http接口
@@ -15,27 +14,25 @@ import okhttp3.Request;
  */
 public class RequestUtils {
 	
-	public static String call(String url, String param) throws IOException{
-		String result = null;
-		StringCallback callBack = new StringCallback()
-        {
-			@Override
-			public void onError(Call arg0, Exception arg1, int arg2) {
-				
+	public static String callHttp(String url, Map<String, String> param) throws HttpException, IOException{
+		PostMethod method = new PostMethod(url);  
+		method.addRequestHeader("Content-Type","text/html;charset=GBK");
+		
+		if(param != null){
+			for (String key : param.keySet()) {
+				method.addParameter(key, param.get(key));
 			}
-
-			@Override
-			public void onResponse(String arg0, int arg1) {
-				System.out.println(arg0);
-				System.out.println(arg1);
-			}
-        };
-		 OkHttpUtils
-		    .post()
-		    .url(url)
-		    .addParams("username", "hyman")
-		    .addParams("password", "123")
-		    .build().execute(callBack);
-		 return "";
+		}
+		HttpClient httpClient = new HttpClient();   
+		httpClient.executeMethod(method);  
+		String resBodyStr = method.getResponseBodyAsString();
+		String resBodyStrGBK = new String(resBodyStr.getBytes("ISO-8859-1"), "GB18030");
+		
+		return resBodyStrGBK;
 	}
+	
+	public static void main(String[] args) throws HttpException, IOException {
+		RequestUtils.callHttp("http://www.baidu.com", null);
+	}
+	
 }
