@@ -16,7 +16,7 @@ public class RequestUtils {
 	
 	public static String callHttp(String url, Map<String, String> param) throws HttpException, IOException{
 		PostMethod method = new PostMethod(url);  
-		method.addRequestHeader("Content-Type","text/html;charset=GBK");
+		method.addRequestHeader("Content-Type","application/x-www-form-urlencoded");
 		
 		if(param != null){
 			for (String key : param.keySet()) {
@@ -26,9 +26,9 @@ public class RequestUtils {
 		HttpClient httpClient = new HttpClient();   
 		httpClient.executeMethod(method);  
 		String resBodyStr = method.getResponseBodyAsString();
-		String resBodyStrGBK = new String(resBodyStr.getBytes("ISO-8859-1"), "GB18030");
+//		String resBodyStrGBK = new String(resBodyStr.getBytes("ISO-8859-1"), "GB18030");
 		
-		return resBodyStrGBK;
+		return resBodyStr;
 	}
 	
 	public static void main(String[] args) throws HttpException, IOException {

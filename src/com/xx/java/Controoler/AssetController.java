@@ -37,15 +37,34 @@ public class AssetController {
 	@ResponseBody
 	@RequestMapping("/headData")
 	public String headData(String tmStart, String tmEnd) throws IOException {
-		String queryId = "face5001-dd5f-4492-ae64-e08e971bed2d";
+		String queryid = "face5001-dd5f-4492-ae64-e08e971bed2d";
 		Map<String, String> param = new HashMap<String, String>();
-		param.put("quryid", queryId);
+		param.put("queryid", queryid);
 		if(StringUtils.isNoneBlank(tmStart) && StringUtils.isNoneBlank(tmEnd)){
 			param.put("tmStart", tmStart);
 			param.put("tmEnd", tmEnd);
 		}
-		RequestUtils.callHttp(path, param);
-		return "";
+		String result = RequestUtils.callHttp(path, param);
+		return result;
+	}
+	/**
+	 * 接口2
+	 * 
+	 * @return
+	 * @throws IOException 
+	 */
+	@ResponseBody
+	@RequestMapping("/intface2")
+	public String intface2(String tmStart, String tmEnd) throws IOException {
+		String queryid = "f4449cc4-e9c4-4f14-9a58-c2be3e6a618f";
+		Map<String, String> param = new HashMap<String, String>();
+		param.put("queryid", queryid);
+		if(StringUtils.isNoneBlank(tmStart) && StringUtils.isNoneBlank(tmEnd)){
+			param.put("tmStart", tmStart);
+			param.put("tmEnd", tmEnd);
+		}
+		String result = RequestUtils.callHttp(path, param);
+		return result;
 	}
 
 }
