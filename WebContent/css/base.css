@@ -1,11 +1,26 @@
-html,
 body {
   width: 100%;
-  height: 100%;
+  font-family: '黑体';
+  color: #8c92a2;
 }
 body {
-  height: 100%;
-  background: url(../img/ybp_bj.jpg) no-repeat;
+  background: #0b1a2f url(../img/ybp_bj.jpg) no-repeat;
   background-size: cover;
-  overflow: hidden;
+}
+.clear:after{
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.color-normal{
+  color: #198be4;
+}
+.color-success{
+  color: #0fa055;
+}
+.color-warning{
+  color: #e2c948;
+}
+.color-danger{
+  color: #c06516;
 }
