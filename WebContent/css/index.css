@@ -84,9 +84,8 @@
   margin-right: 20px;
 }
 .main .right{
-  float: right;
-  width: 395px;
-  height: 920px;
+  float: left;
+  margin-left: 20px;
 }
 .main .main-title{
   color: #8c92a2;
@@ -94,7 +93,7 @@
   text-align: center;
 }
 .main .top-charts{
-  width: 100%;
+  width: 97%;
   height: 330px;
 }
 .main .top-charts .title{
@@ -105,7 +104,7 @@
   line-height: 43px;
 }
 .main .top-charts .top-charts-c{
-  width: 100%;
+  width: 97%;
   height: 280px;
   background: rgba(0,0,0,.1);
   margin: 0 auto;
@@ -253,4 +252,8 @@
   border-top: 1px solid #8c92a2;
   line-height: 24px;
   padding: 0 10px;
+}
+.main .right .sidebar{
+  width: 350px;
+  height: 920px;
 }
