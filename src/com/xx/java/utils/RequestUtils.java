@@ -36,9 +36,11 @@ public class RequestUtils {
 	
 	public static void main(String[] args) throws HttpException, IOException {
 //		RequestUtils.callHttp("http://www.baidu.com", null);
-		String str = "\u6545\u969c\u5a01\u80c1";
+		String str = "\"n\": \"\u5a01\u80c1\u603b\u6570\"},";
 		System.out.println(convertUnicode(str));
-		System.out.println(new String(str.getBytes("gb2312"), "UTF-8"));
+		
+//		{"recordsTotal": "6", "recordsFiltered": "6", "data": [{"v": 2207, "id": 1, "n": "\u5a01\u80c1\u603b\u6570"}, {"v": 1000, "id": 2, "n": "\u6f0f\u6d1e\u5a01\u80c1"}, {"v": 1000, "id": 3, "n": "\u9ed1\u94fe\u5a01\u80c1"}, {"v": 0, "id": 4, "n": "\u653b\u51fb\u5a01\u80c1"}, {"v": 207, "id": 5, "n": "\u6545\u969c\u5a01\u80c1"}, {"v": 0, "id": 6, "n": "\u5176\u4ed6\u5a01\u80c1"}]}
+		
 	}
 	
 	public static String convertUnicode(String ori){
