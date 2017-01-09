@@ -2,6 +2,21 @@ $(function(){
     var $body = $("body");
     var pie1 = echarts.init($('.pie1').get(0));
 
+    var table_btn = $('.table').find('.icon');
+
+    table_btn.on('click',function(){
+        var _self = $(this);
+
+        var id = _self.attr('data-target');
+
+        var hide = _self.parents('.table').find('#'+id);
+
+        console.log(hide);
+
+        hide.toggleClass('hide');
+
+    });
+
     // 指定图表的配置项和数据
     var pie1option = {
         series: [
@@ -181,6 +196,7 @@ $(function(){
 
 
 
+    //主页中间线表
     var line1 = echarts.init($('.top-charts-c').get(0));
 
     var line1x = function (a) {
@@ -236,4 +252,57 @@ $(function(){
     };
 
     line1.setOption(line1option);
+    //end
+
+    //页头圆形表
+    var c1 = echarts.init($('.middle-circle>.c1').get(0));
+
+    var c1option={
+        series:[
+            {
+                name:'',
+                type: 'pie',
+                radius: ['80%', '90%'],
+                clockwise:false,
+                silent:true,
+                label: {
+                    normal: {
+                        position:'center',
+                        show: false
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {
+                        value: 80,
+                        name: 'aaa',
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 2, 1, [{
+                                    offset: 0, color: '#fd342d' // 0% 处的颜色
+                                }, {
+                                    offset: 1, color: 'transparent' // 100% 处的颜色
+                                }], false)
+                            }
+                        }
+                    },
+                    {
+                        value:20,
+                        itemStyle:{
+                            normal:{
+                                color:'rgba(255,255,255,.1)'
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
+    c1.setOption(c1option);
+
 });
