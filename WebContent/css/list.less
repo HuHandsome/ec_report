@@ -1,0 +1,484 @@
+body {
+    background: #0C1C35 url("../img/ybp_bj.jpg") center center no-repeat;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+@bluea: #1A365B; //边框颜色
+@blueb: #0372CC; //边框四个角的颜色
+@yello: #FDC70F; //黄色字体
+@orange:#FF7C03;//橘色字体
+@gray: #A9ADB9; //字体主灰色
+.content {
+    width: 98%;
+    margin: 0 1%;
+    h6 {
+        color: @gray;
+    }
+    .contentLeft {
+        padding:0;
+        ul li {
+            color: @gray;
+            width: 98%;
+            height: auto;
+            background: rgba(225,225,225,0.21);
+            padding: 1%;
+            margin-bottom: 10px;
+            p {
+                font-size: 13px;
+                padding: 0;
+                margin: 0;
+                img {
+                    height: 17px;
+                    width: 25px;
+                }
+                .label {
+                    border-radius: 0 !important;
+                    margin-right: 5px;
+                    background: #12457C;
+                    padding: 3px 6px;
+                    font-weight: normal;
+                }
+                a {
+                    font-size: 12px;
+                    color: #30B1EB;
+                    padding-left: 9px;
+                }
+            }
+            p.relationIp {
+                color: #30B1EB;
+            }
+            p.labelings {
+                margin-top: 10px;
+            }
+        }
+    }
+    .contentRight {
+        padding: 0;
+        height: 800px;
+        div.p-box {
+            margin-bottom:10px;
+            position: relative;
+            height: 80px;
+            width: 100%;
+            border: 1px solid @bluea;
+            .styleTandB{
+                table{
+                   border:0px;
+                   width:96%;
+                   margin:2%;
+                   color:@blueb;
+                  
+                   thead tr{
+                       background:#0D2A4C;
+                       border:0px;
+                       border-bottom:2px solid @bluea;
+                       td{text-align:center; border:0px;} 
+                       td:nth-child(1){
+                           width:60%;
+                      
+                       }
+                   }
+                   tbody tr{
+                       border:0px;
+                       border-bottom:1px solid @bluea;
+                       td{text-align:center; border:0px;} 
+                       td:nth-child(1){
+                           width:60%;
+                      
+                       }
+                   }
+                   tbody tr.nodata{
+                        border-bottom:0;
+                        td{
+                            text-align:left;
+                            color:@gray;
+                            width:100% !important;
+                        }
+                   }
+
+                }
+                div.table-footer{
+                    width:96%;
+                    margin-left:2%;
+                    ul{
+                        li{
+                            cursor:pointer;
+                            float:left;
+                            color: @gray;
+                            height:20px;
+                            width: 20px;
+                            margin-right:5px;
+                            text-align:center;
+                            line-height:20px;
+                            }
+                        li.active{background:@bluea;}
+                        li.page{color:@blueb;border-radius:50%;background:@bluea;}
+                    }
+                }
+                
+            }
+            .styleLandR {
+                height: 96%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                width: 96%;
+                padding-left: 2%;
+                h5 {
+                    text-align:center;
+                    margin: 0;
+                    height: 100%;
+                    width: 30%;
+                    float: left;
+                    border-right: 1px solid @bluea;
+                    position:relative;
+                    p{
+                        position:absolute;
+                        padding:0px;
+                        top:50%;
+                        left:50%;
+                        margin-left:-28px;
+                        margin-top:-7px;
+                    }
+                    p.yello{color:@yello;}
+                    p.orange{color:@orange;}
+                }
+                div.styleLandR_right{
+                    float: right;
+                    position:relative;
+                    height:100%;
+                    width: 64%;
+                    margin-top: 5px;
+                    ul {
+                        position:absolute;
+                        width:100%;
+                        top: 50%;
+                        left:50%;
+                        margin-top:-12%;
+                        margin-left:-50% ;
+                        li {
+                            p {
+                                color: @gray;
+                            }
+                            em.yello {
+                                color: @yello;
+                            }
+                            em.orange {
+                                color: @orange;
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+    }
+}
+
+.header-bk{
+    background: url("../img/top_bj.png") no-repeat center center;
+    background-size: 100% 100%;
+    width: 98%;
+    height: 249px;
+    position: absolute;
+    z-index: 1;
+}
+
+#header{
+    width: 98%;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    height: 180px;
+    .header-part{
+        float: left;
+    }
+    .first-part{
+        width: 16%;
+        position: relative;
+        .nav-icon{
+            cursor: pointer;
+            height: 62px;
+            background-image: url("../img/nave.png");
+            width: 65px;
+            position: absolute;
+            left: 20px;
+            top: 90px;
+            &:hover{
+                background-image: url("../img/nave_on.png");
+            }
+        }
+        .logo{
+            height: 100px;
+            margin-left: 120px;
+            margin-top: 30px;
+            position: relative;
+        }
+        .pic{
+            width: 40px;
+            height: 40px;
+            margin-top: 10px;
+            float: left;
+            background: url("../img/logo.png") no-repeat;
+            background-size: contain;
+        }
+        a{
+            font-size: 40px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    }
+    .second-part{
+        width: 19%;
+        float: left;
+        height: 150px;
+        .pie1{
+            float: left;
+            margin-top: 10px;
+            height: 150px;
+            width: 150px;
+        }
+        .pie1-label{
+            float: left;
+            ul{
+                padding: 0;
+                margin: 25px 0;
+                overflow: hidden;
+                list-style: none;
+                li{
+                    margin: 10px;
+                    font-size: 14px;
+                    color: #8c92a2;
+                }
+            }
+        }
+    }
+    .third-part{
+        width: 43%;
+        float: left;
+        .mc-item{
+            width: 110px;
+            height: 110px;
+            background: #8c92a2;
+            margin: 20px 8px;
+            float: left;
+        }
+    }
+}
+
+#index-page{
+    color: @gray;
+    .content{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .contentLeft{
+        padding: 0;
+        .top-charts{
+            .top-charts-content{
+                padding: 20px;
+                .title{
+                    width: 158px;
+                    height: 43px;
+                    background-image: url("../img/title_bj.png");
+                    text-align: center;
+                    line-height: 43px;
+                }
+                .top-charts-c{
+                    width: 97%;
+                    height: 280px;
+                    background: rgba(0, 0, 0, .1);
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .middle-table{
+            margin-top: 20px;
+            .title{
+                font-size: 24px;
+                font-weight: bold;
+                padding-left: 20px;
+                border-left: 6px solid #0372cc;
+                color: #ffffff;
+                position: relative;
+                width: 150px;
+                .up-arrow{
+                    background-image: url("../img/table_up.jpg");
+                    width: 22px;
+                    height: 22px;
+                    position: absolute;
+                    right: 0;
+                    top: 3px;
+                    cursor: pointer;
+                }
+            }
+            .toolbar{
+                color: @blueb;
+                margin: 10px 0;
+                height: 40px;
+                padding: 2px;
+                .search-bar{
+                    float: left;
+                    .input {
+                        color: #026c96;
+                        border: 1px solid #264c7b;
+                        font-size: 12px;
+                        padding-left: 8px;
+                        width: 237px;
+                        height: 36px;
+                        background: #0b2644;
+                        outline: none;
+                    }
+                    button{
+                        background: #12457c;
+                        outline: none;
+                        height: 24px;
+                        width: 52px;
+                        text-align: center;
+                        color: #2bb1e6;
+                        border: none;
+                        font-size: 12px;
+                        cursor: pointer;
+                    }
+                }
+                .pagination-bar{
+                    float: right;
+                    color: #2bb2e9;
+                    height: 36px;
+                    line-height: 36px;
+                    .pagi-sel{
+                        margin-right: 30px;
+                        float: left;
+                        .select{
+                            width: 57px;
+                            height: 28px;
+                            border: 1px solid #264c7b;
+                            background: #0b2644;
+                            color: #026c96;
+                        }
+                    }
+                    .pageWrap{
+                        float: left;
+                        ul{
+                            li{
+                                cursor:pointer;
+                                float:left;
+                                color: @gray;
+                                height:20px;
+                                width: 20px;
+                                margin-right:5px;
+                                text-align:center;
+                                line-height:20px;
+                            }
+                            li.active{background:@bluea;}
+                            li.page{color:@blueb;border-radius:50%;background:@bluea;}
+                        }
+                    }
+                }
+            }
+            .table-c{
+                width: 100%;
+                height: 420px;
+                .table{
+                    width: 100%;
+                    font-size: 14px;
+                    border-right: 1px solid #8c92a2;
+                    border-bottom: 1px solid #8c92a2;
+                    border-collapse: collapse;
+                    th{
+                        text-align: left;
+                        padding: 10px 0 10px 10px;
+                        background: #0d2d54;
+                        border-left: 1px solid #8c92a2;
+                        border-top: 1px solid #8c92a2;
+                        margin: 0;
+                    }
+                    td{
+                        color: #8c92a2;
+                        border-left: 1px solid #8c92a2;
+                        border-top: 1px solid #8c92a2;
+                        line-height: 24px;
+                        padding: 0 10px;
+                    }
+                    .more-info{
+                        padding: 10px;
+                        line-height: 20px;
+                        font-size: 14px;
+                        color: #fff;
+                        p{
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contentRight{
+        padding: 0;
+        height: 800px;
+        .sidebar{
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            .sidebar-t{
+                text-align: center;
+                margin: 10px 0;
+                background: url("../img/title_bj.png") repeat;
+                height: 44px;
+                line-height: 44px;
+            }
+            .sidebar-c{
+                .item-list{
+                    .item{
+                        border-bottom: 1px dashed #2e4c72;
+                        padding: 15px;
+                        .item-text{
+                            width: 100%;
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.special-border{
+    margin-bottom:10px;
+    position: relative;
+    width: 100%;
+    border: 1px solid @bluea;
+    &>span{
+        position: absolute;
+        height: 12px;
+        width: 10px;
+        display: block;
+    }
+    span.tl {
+        top: -1px;
+        left: -1px;
+        border-top: 2px solid @blueb;
+        border-left: 2px solid @blueb;
+    }
+    span.tr {
+        top: -1px;
+        right: -1px;
+        border-top: 2px solid @blueb;
+        border-right: 2px solid @blueb;
+    }
+    span.bl {
+        bottom: -1px;
+        left: -1px;
+        border-bottom: 2px solid @blueb;
+        border-left: 2px solid @blueb;
+    }
+    span.br {
+        bottom: -1px;
+        right: -1px;
+        border-bottom: 2px solid @blueb;
+        border-right: 2px solid @blueb;
+    }
+}

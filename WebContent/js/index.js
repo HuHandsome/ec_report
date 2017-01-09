@@ -4,14 +4,20 @@ $(function(){
 
     var table_btn = $('.table').find('.icon');
 
+    var absa = {
+        "d": {
+            "A": "[\"abfc82eddbe1b8f1.cname.365cyd.cn.\",\"42.96.165.91\"]"
+        }
+    };
+
+    console.log(absa.d.A);
+
     table_btn.on('click',function(){
         var _self = $(this);
 
         var id = _self.attr('data-target');
 
         var hide = _self.parents('.table').find('#'+id);
-
-        console.log(hide);
 
         hide.toggleClass('hide');
 

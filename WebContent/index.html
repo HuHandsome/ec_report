@@ -3,12 +3,16 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-		<link rel="stylesheet" type="text/css" href="css/base.css"/>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link type="text/css" rel="stylesheet" href="plugin/bootstrap/css/bootstrap-theme.min.css" />
+		<link type="text/css" rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<link type="text/css" rel="stylesheet" href="css/list.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		<div class="container">
+		<div class="container-">
 			<div class="header">
 				<div class="left">
 					<div class="nav-icon"></div>
@@ -49,161 +53,162 @@
 					</div>
 				</div>
 			</div>
-			<div class="main">
-				<div class="main-title">
-					当前位置:资产运行状况
-				</div>
-				<div class="left">
-					<div class="top-charts special-border">
-						<div class="title">
-							响应速度趋势
-						</div>
-						<div class="top-charts-c"></div>
-					</div>
-					<div class="middle-table">
-						<div class="title">
-							详细数据
-							<span class="up-arrow"></span>
-						</div>
-						<div class="toolbar">
-							<div class="search-bar">
-								<span class="label">模糊查询</span>
-								<input class="input" type="text" placeholder="在这里输入进行检索">
-								<button>搜索</button>
-							</div>
-							<div class="pagination-bar">
-								<div class="pagi-sel">
-									<span class="label">显示</span>
-									<select class="select" name="" id="">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-									</select>
+			<div id="index-page" class="container-fluid content">
+				<div class="row">
+					<div class="col-md-9 contentLeft">
+						<div class="top-charts special-border">
+							<span class="tl"></span>
+							<span class="tr"></span>
+							<span class="bl"></span>
+							<span class="br"></span>
+							<div class="clearfix top-charts-content">
+								<div class="title">
+									响应速度趋势
 								</div>
-								<div class="pagi-list">
-									<div class="pagi-list-prev pagi-list-btn">
-
+								<div class="top-charts-c"></div>
+							</div>
+						</div>
+						<div class="middle-table">
+							<div class="title">
+								详细数据
+								<span class="up-arrow"></span>
+							</div>
+							<div class="toolbar">
+								<div class="search-bar">
+									<span>模糊查询</span>
+									<input class="input" type="text" placeholder="在这里输入进行检索">
+									<button>搜索</button>
+								</div>
+								<div class="pagination-bar">
+									<div class="pagi-sel">
+										<span>显示</span>
+										<select class="select" name="" id="">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+										</select>
 									</div>
-									<div class="pagi-list-num">
-										<ul>
+									<div class="pageWrap clearfix">
+										<ul class="fr">
+											<li class="page prev"><</li>
 											<li class="active">1</li>
 											<li>2</li>
 											<li>3</li>
 											<li>4</li>
 											<li>5</li>
-											<li>……</li>
+											<li>...</li>
+											<li class="page next">></li>
 										</ul>
-									</div>
-									<div class="pagi-list-next  pagi-list-btn">
-
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="table-c">
-							<table class="table" border=0 cellspacing=1>
-								<tr>
-									<th></th>
-									<th></th>
-									<th>探测引擎</th>
-									<th>响应速度</th>
-									<th>响应代码</th>
-									<th>探测时间</th>
-									<th>异常等级</th>
-								</tr>
-								<tr>
-									<td>1</td>
-									<td><span class="icon"></span></td>
-									<td>default</td>
-									<td>151.235ms</td>
-									<td>200</td>
-									<td>2017-1-8 18:15:04</td>
-									<td>正常</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td><span class="icon" data-target="tb2">a</span></td>
-									<td>default
+							<div class="table-c">
+								<table class="table" border=0 cellspacing=1>
+									<tr>
+										<th></th>
+										<th></th>
+										<th>探测引擎</th>
+										<th>响应速度</th>
+										<th>响应代码</th>
+										<th>探测时间</th>
+										<th>异常等级</th>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td><span class="icon"></span></td>
+										<td>default</td>
+										<td>151.235ms</td>
+										<td>200</td>
+										<td>2017-1-8 18:15:04</td>
+										<td>正常</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><span class="icon" data-target="tb2">a</span></td>
+										<td>default
 
-									</td>
-									<td>151.235ms</td>
-									<td>200</td>
-									<td>2017-1-8 18:15:04</td>
-									<td>正常</td>
-								</tr>
-								<tr class="hide" id="tb2">
-									<td colspan="7">
-										<div class="more-info">
-											<p>浏览器标识:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36</p>
-											<p>A记录:[128.1.1.0]</p>
-											<p>NS记录:["ns8.cnmsn.net"]</p>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td><span class="icon" data-target="#2"></span></td>
-									<td>default
+										</td>
+										<td>151.235ms</td>
+										<td>200</td>
+										<td>2017-1-8 18:15:04</td>
+										<td>正常</td>
+									</tr>
+									<tr class="hide" id="tb2">
+										<td colspan="7">
+											<div class="more-info">
+												<p>浏览器标识:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36</p>
+												<p>A记录:[128.1.1.0]</p>
+												<p>NS记录:["ns8.cnmsn.net"]</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td><span class="icon" data-target="#2"></span></td>
+										<td>default
 
-									</td>
-									<td>151.235ms</td>
-									<td>200</td>
-									<td>2017-1-8 18:15:04</td>
-									<td>正常</td>
-								</tr>
-							</table>
+										</td>
+										<td>151.235ms</td>
+										<td>200</td>
+										<td>2017-1-8 18:15:04</td>
+										<td>正常</td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="right">
-					<div class="sidebar special-border">
-						<div class="sidebar-t">
-							威胁详细
-						</div>
-						<div class="sidebar-c">
-							<ul class="item-list">
-								<li class="item">
-									<div class="item-text">
-										网站无法正常响应
-									</div>
-									<div class="item-info">
-										<span class="color-warning">故障威胁</span>
-										<span class="color-normal">故障源:</span>
-										<span class="color-warning">1.2.3.4</span>
-									</div>
-								</li>
-								<li class="item">
-									<div class="item-text">
-										网站无法正常响应
-									</div>
-									<div class="item-info">
-										<span class="color-warning">故障威胁</span>
-										<span class="color-normal">故障源:</span>
-										<span class="color-warning">1.2.3.4</span>
-									</div>
-								</li>
-								<li class="item">
-									<div class="item-text">
-										网站无法正常响应
-									</div>
-									<div class="item-info">
-										<span class="color-warning">故障威胁</span>
-										<span class="color-normal">故障源:</span>
-										<span class="color-warning">1.2.3.4</span>
-									</div>
-								</li>
-							</ul>
+					<div class="col-md-3 contentRight">
+						<div class="sidebar special-border">
+							<span class="tl"></span>
+							<span class="tr"></span>
+							<span class="bl"></span>
+							<span class="br"></span>
+							<div class="sidebar-t">
+								威胁详细
+							</div>
+							<div class="sidebar-c">
+								<ul class="item-list">
+									<li class="item">
+										<div class="item-text">
+											网站无法正常响应
+										</div>
+										<div class="item-info">
+											<span class="color-warning">故障威胁</span>
+											<span class="color-normal">故障源:</span>
+											<span class="color-warning">1.2.3.4</span>
+										</div>
+									</li>
+									<li class="item">
+										<div class="item-text">
+											网站无法正常响应
+										</div>
+										<div class="item-info">
+											<span class="color-warning">故障威胁</span>
+											<span class="color-normal">故障源:</span>
+											<span class="color-warning">1.2.3.4</span>
+										</div>
+									</li>
+									<li class="item">
+										<div class="item-text">
+											网站无法正常响应
+										</div>
+										<div class="item-info">
+											<span class="color-warning">故障威胁</span>
+											<span class="color-normal">故障源:</span>
+											<span class="color-warning">1.2.3.4</span>
+										</div>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
 	</body>
 </html>
