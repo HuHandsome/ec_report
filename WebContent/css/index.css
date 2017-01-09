@@ -315,6 +315,8 @@
 .main .right .sidebar {
     width: 350px;
     color: #8c92a2;
+    max-height: 636px;
+    overflow-x: auto;
 }
 
 .main .right .sidebar .sidebar-t {
