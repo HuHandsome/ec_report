@@ -288,5 +288,28 @@ public class AssetController {
 		String result = RequestUtils.callHttp(path, param);
 		return result;
 	}
+	
+	/**
+	 * 接口11
+	 * 
+	 * @return
+	 * @throws IOException 
+	 */
+	@ResponseBody
+	@RequestMapping("/intface11")
+	public String intface11(Integer cid, String tmStart, String tmEnd) throws IOException {
+		String queryid = "023ba092-4170-4c72-a936-e3efb09ebbd4";
+		Map<String, String> param = new HashMap<String, String>();
+		param.put("queryid", queryid);
+		if(StringUtils.isNoneBlank(tmStart) && StringUtils.isNoneBlank(tmEnd)){
+			param.put("tmStart", tmStart);
+			param.put("tmEnd", tmEnd);
+		}
+		if(cid != null){
+			param.put("cid", cid + "");
+		}
+		String result = RequestUtils.callHttp(path, param);
+		return result;
+	}
 
 }
