@@ -1,23 +1,15 @@
-$(function(){
+$(function () {
     var $body = $("body");
     var pie1 = echarts.init($('.pie1').get(0));
 
     var table_btn = $('.table').find('.icon');
 
-    var absa = {
-        "d": {
-            "A": "[\"abfc82eddbe1b8f1.cname.365cyd.cn.\",\"42.96.165.91\"]"
-        }
-    };
-
-    console.log(absa.d.A);
-
-    table_btn.on('click',function(){
+    table_btn.on('click', function () {
         var _self = $(this);
 
         var id = _self.attr('data-target');
 
-        var hide = _self.parents('.table').find('#'+id);
+        var hide = _self.parents('.table').find('#' + id);
 
         hide.toggleClass('hide');
 
@@ -27,11 +19,11 @@ $(function(){
     var pie1option = {
         series: [
             {
-                name:'访问来源',
-                type:'pie',
+                name: '访问来源',
+                type: 'pie',
                 radius: ['74%', '90%'],
                 avoidLabelOverlap: false,
-                silent:true,
+                silent: true,
                 label: {
                     normal: {
                         show: false
@@ -42,19 +34,19 @@ $(function(){
                         show: false
                     }
                 },
-                data:[
+                data: [
                     {
                         value: 25,
-                        name:'empty',
-                        itemStyle:{
-                            normal:{
-                                opacity:0
+                        name: 'empty',
+                        itemStyle: {
+                            normal: {
+                                opacity: 0
                             }
                         }
                     },
                     {
-                        value:75,
-                        name:'资产总数',
+                        value: 75,
+                        name: '资产总数',
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -62,18 +54,18 @@ $(function(){
                                 }, {
                                     offset: 1, color: 'rgba(0,0,0,0)' // 100% 处的颜色
                                 }], false),
-                                borderColor:'#198be4'
+                                borderColor: '#198be4'
                             }
                         }
                     }
                 ]
             },
             {
-                name:'访问来源',
-                type:'pie',
+                name: '访问来源',
+                type: 'pie',
                 radius: ['54%', '70%'],
                 avoidLabelOverlap: false,
-                silent:true,
+                silent: true,
                 label: {
                     normal: {
                         show: false
@@ -84,19 +76,19 @@ $(function(){
                         show: false
                     }
                 },
-                data:[
+                data: [
                     {
                         value: 50,
-                        name:'empty',
-                        itemStyle:{
-                            normal:{
-                                opacity:0
+                        name: 'empty',
+                        itemStyle: {
+                            normal: {
+                                opacity: 0
                             }
                         }
                     },
                     {
-                        value:50,
-                        name:'正常资产',
+                        value: 50,
+                        name: '正常资产',
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -104,18 +96,18 @@ $(function(){
                                 }, {
                                     offset: 1, color: 'rgba(0,0,0,0)' // 100% 处的颜色
                                 }], false),
-                                borderColor:'#0fa055'
+                                borderColor: '#0fa055'
                             }
                         }
                     }
                 ]
             },
             {
-                name:'访问来源',
-                type:'pie',
+                name: '访问来源',
+                type: 'pie',
                 radius: ['34%', '50%'],
                 avoidLabelOverlap: false,
-                silent:true,
+                silent: true,
                 label: {
                     normal: {
                         show: false
@@ -126,19 +118,19 @@ $(function(){
                         show: false
                     }
                 },
-                data:[
+                data: [
                     {
                         value: 70,
-                        name:'empty',
-                        itemStyle:{
-                            normal:{
-                                opacity:0
+                        name: 'empty',
+                        itemStyle: {
+                            normal: {
+                                opacity: 0
                             }
                         }
                     },
                     {
-                        value:30,
-                        name:'问题资产',
+                        value: 30,
+                        name: '问题资产',
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -146,18 +138,18 @@ $(function(){
                                 }, {
                                     offset: 1, color: 'rgba(0,0,0,0)' // 100% 处的颜色
                                 }], false),
-                                borderColor:'#e2c948'
+                                borderColor: '#e2c948'
                             }
                         }
                     }
                 ]
             },
             {
-                name:'访问来源',
-                type:'pie',
+                name: '访问来源',
+                type: 'pie',
                 radius: ['14%', '30%'],
                 avoidLabelOverlap: false,
-                silent:true,
+                silent: true,
                 label: {
                     normal: {
                         show: false
@@ -168,19 +160,19 @@ $(function(){
                         show: false
                     }
                 },
-                data:[
+                data: [
                     {
                         value: 85,
-                        name:'empty',
-                        itemStyle:{
-                            normal:{
-                                opacity:0
+                        name: 'empty',
+                        itemStyle: {
+                            normal: {
+                                opacity: 0
                             }
                         }
                     },
                     {
-                        value:15,
-                        name:'问题单位',
+                        value: 15,
+                        name: '问题单位',
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -188,7 +180,7 @@ $(function(){
                                 }, {
                                     offset: 1, color: 'rgba(0,0,0,0)' // 100% 处的颜色
                                 }], false),
-                                borderColor:'#c06516'
+                                borderColor: '#c06516'
                             }
                         }
                     }
@@ -201,13 +193,12 @@ $(function(){
     pie1.setOption(pie1option);
 
 
-
     //主页中间线表
     var line1 = echarts.init($('.top-charts-c').get(0));
 
     var line1x = function (a) {
         var arr = [];
-        for (var i=1;i<=a;i++){
+        for (var i = 1; i <= a; i++) {
             arr.push(i);
         }
         return arr;
@@ -215,14 +206,14 @@ $(function(){
 
     var line1y = function (a) {
         var arr = [];
-        for (var i=1;i<=a;i++){
-            arr.push(parseInt(Math.random(0,1)*1000));
+        for (var i = 1; i <= a; i++) {
+            arr.push(parseInt(Math.random(0, 1) * 1000));
         }
         return arr;
     };
 
     var line1option = {
-        tooltip : {
+        tooltip: {
             trigger: 'axis'
         },
         grid: {
@@ -231,28 +222,28 @@ $(function(){
             bottom: '3%',
             containLabel: true
         },
-        xAxis : [
+        xAxis: [
             {
-                type : 'category',
-                boundaryGap : false,
-                axisTick:{
-                  interval:10
+                type: 'category',
+                boundaryGap: false,
+                axisTick: {
+                    interval: 10
                 },
-                data:line1x(130)
+                data: line1x(130)
             }
         ],
-        yAxis : [
+        yAxis: [
             {
-                type : 'value'
+                type: 'value'
             }
         ],
-        series : [
+        series: [
             {
-                name:'邮件营销',
-                type:'line',
+                name: '邮件营销',
+                type: 'line',
                 stack: '总量',
                 areaStyle: {normal: {}},
-                data:line1y(130)
+                data: line1y(130)
             }
         ]
     };
@@ -261,19 +252,18 @@ $(function(){
     //end
 
     //页头圆形表
-    var c1 = echarts.init($('.middle-circle>.c1').get(0));
+    var carr = $('.mc-item');
 
-    var c1option={
-        series:[
+    var c1option = {
+        series: [
             {
-                name:'',
                 type: 'pie',
                 radius: ['80%', '90%'],
-                clockwise:false,
-                silent:true,
+                clockwise: false,
+                silent: true,
                 label: {
                     normal: {
-                        position:'center',
+                        position: 'center',
                         show: false
                     }
                 },
@@ -285,7 +275,6 @@ $(function(){
                 data: [
                     {
                         value: 80,
-                        name: 'aaa',
                         itemStyle: {
                             normal: {
                                 color: new echarts.graphic.LinearGradient(0, 0, 2, 1, [{
@@ -297,10 +286,59 @@ $(function(){
                         }
                     },
                     {
-                        value:20,
-                        itemStyle:{
-                            normal:{
-                                color:'rgba(255,255,255,.1)'
+                        value: 20,
+                        itemStyle: {
+                            normal: {
+                                color: 'rgba(255,255,255,.1)'
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                name: '问题资产',
+                type: 'pie',
+                radius: ['0', '70%'],
+                clockwise: false,
+                silent: true,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'center',
+                        textStyle: {
+                            fontSize: '14',
+                            fontWeight: 'bold',
+                            color: '#198be4'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {
+                        value: 100,
+                        name: '12350',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'center',
+                                textStyle: {
+                                    fontSize: '14',
+                                    fontWeight: 'bold',
+                                    color: '#FFF'
+                                }
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.RadialGradient(0.5, 0.5, 3, [{
+                                    offset: 0, color: '#093456' // 0% 处的颜色
+                                }, {
+                                    offset: 1, color: '#fff' // 100% 处的颜色
+                                }], false)
                             }
                         }
                     }
@@ -309,6 +347,15 @@ $(function(){
         ]
     };
 
-    c1.setOption(c1option);
+    $.each(carr, function (k, v) {
+        var c = echarts.init(v);
+        var n = parseInt($(v).attr('data-num'));
+        c1option.series[1].name = $(v).attr('data-name');
+        c1option.series[1].data[0].name = $(v).attr('data-name');
+        c1option.series[0].data[0].value = n;
+        c1option.series[0].data[1].value = 100 - n;
+        c.setOption(c1option);
+    });
+
 
 });
