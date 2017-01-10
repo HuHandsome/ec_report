@@ -1,5 +1,5 @@
 $(function(){
-	$.post("http://localhost:8080/ec_ui/rest/asset/intface8?isExtra=true",function(data){
+	$.post("/ec_ui/rest/asset/intface8?isExtra=true",function(data){
 		var list = $("#list");
 		var li = "";
 		data = JSON.parse(data);
