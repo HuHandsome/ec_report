@@ -19,7 +19,6 @@
 		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/common_top.js"></script>
-		<script type="text/javascript" src="js/index_temp.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -220,11 +219,11 @@
 									<ul class="">
 										<li class="clearfix">
 											<p class="fl">ip总数</p>
-											<em class="fr yello">674</em>
+											<em class="fr yello" id="ip_total">674</em>
 										</li>
 										<li class="clearfix">
-											<p class="fl">ip总数</p>
-											<em class="fr yello">674</em>
+											<p class="fl">网站总数</p>
+											<em class="fr yello" id="i_total">674</em>
 										</li>
 									</ul>
 								</div>
@@ -245,11 +244,7 @@
 								<ul class="">
 									<li class="clearfix">
 										<p class="fl">ip总数</p>
-										<em class="fr orange">674</em>
-									</li>
-									<li class="clearfix">
-										<p class="fl">ip总数</p>
-										<em class="fr orange">674</em>
+										<em class="fr orange" id="s_total">674</em>
 									</li>
 								</ul>
 								</div>
@@ -271,7 +266,7 @@
 											<td>频率</td>
 										</tr>
 									</thead>
-									<tbody>
+									<tbody id="asset_areas">
 										<tr class="nodata">
 											<td colspan="100">没有发现资产</td>
 										</tr>
@@ -295,7 +290,7 @@
 											<td>频率</td>
 										</tr>
 									</thead>
-									<tbody>
+									<tbody id="asset_users">
 										<tr class="nodata">
 											<td colspan="100">没有发现资产</td>
 										</tr>
@@ -319,7 +314,7 @@
 											<td>频率</td>
 										</tr>
 									</thead>
-									<tbody>
+									<tbody id="asset_tags">
 										<tr>
 											<td>jQuery</td>
 											<td>277</td>
@@ -353,7 +348,7 @@
 									</tbody>
 								</table>
 								<div class="table-footer">
-									<h6>从1条到10条的记录 总显示记录数为72条</h6>
+									<h6>从<span id="page_duan">1条到10</span>条的记录 总显示记录数为<span id="total_count">72</span>条</h6>
 									<div class="pageWrap clearfix">
 										<ul class="fr" id="page1">
 											<li class="page prev"><</li>
@@ -378,4 +373,95 @@
 			<!--middle end-->
 		</div>
 	</body>
+	<script type="text/javascript">
+
+	var tags_data=[];
+	var tags_data_temp=[];
+	var rowStart = 0;
+	var pageNum = 1;
+
+	function showIntface(li){
+		if(li != undefined){
+			rowStart = $(li).attr("start");
+			pageNum = parseInt($(li).text());
+		}
+		tags_data_temp=[];
+		for(var i=rowStart;i<tags_data.length;i++){
+			if(tags_data_temp.length>=10){
+				break;
+			}
+			tags_data_temp.push(tags_data[i]);
+		}
+		$("#asset_tags").empty();
+		$.each(tags_data_temp, function(i, v){
+			$("#asset_tags").append('<tr><td>'+v.name+'</td><td>'+v.count+'</td><td>'+v.freq+'%</td></tr>');
+		});
+		$("#page_duan").text(rowStart+"条到"+rowStart+10);
+		initPage($("#page1"), tags_data.length, 10, pageNum, "showIntface(this)");
+	}
+	
+	$.post("rest/asset/intface9",function(result){
+		var resultData = JSON.parse(result);
+		var total_ip = resultData.totalIP;
+		var total_i = resultData.total;
+		var total_s = resultData.totalTag;
+		$("#ip_total").text(total_ip);
+		$("#i_total").text(total_i);
+		$("#s_total").text(total_s);
+		$("#asset_areas").empty();
+		$.each(resultData.areas, function(i, v){
+			$("#asset_areas").append('<tr><td>区域</td><td>'+v.name+'</td><td>'+v.freq+'%</td></tr>');
+		});
+		$("#asset_users").empty();
+		$.each(resultData.users, function(i, v){
+			$("#asset_users").append('<tr><td>区域</td><td>'+v.name+'</td><td>'+v.freq+'%</td></tr>');
+		});
+		tags_data=resultData.tags;
+		$("#asset_tags").empty();
+		tags_data_temp=[];
+		for(var i=0;i<tags_data.length;i++){
+			if(tags_data_temp.length>=10){
+				break;
+			}
+			tags_data_temp.push(tags_data[i]);
+		}
+		$.each(tags_data_temp, function(i, v){
+			$("#asset_tags").append('<tr><td>'+v.name+'</td><td>'+v.count+'</td><td>'+v.freq+'%</td></tr>');
+		});
+		$("#total_count").text(tags_data.length);
+		initPage($("#page1"), tags_data.length, 10, 1, "showIntface(this)");
+	});
+	
+	function initPage(doc, totalSize, pageSize, pageNum, clickName){
+		var pageTotal = Math.ceil(totalSize / pageSize);
+		var pageList = new Array();
+		if(pageNum <= 3){
+			for(var i = 1; i <= pageTotal; i ++){
+				pageList.push(i);
+				if(pageList.length == 5){
+					break;
+				}
+			}
+		}else{
+			//pageList = [(pageNum - 2), (pageNum - 1), pageNum];
+			for(var i = (pageNum - 2); i <= pageTotal; i++){
+				pageList.push(i);
+				if(pageList.length == 5){
+					break;
+				}
+			}
+		}
+		var lis = "<li class='page prev' start='0' onclick='"+clickName+"'><</li>";
+		for(var i in pageList){
+			if(pageList[i] == pageNum){
+				lis += "<li class='active' start='" + (pageList[i] * pageSize) + "' onclick='"+clickName+"'><a href='javascript:void(0)'>" + pageList[i] + "</a></li>";
+			}else{
+				lis += "<li start='" + (pageList[i] * pageSize) + "' onclick='"+clickName+"'><a href='javascript:void(0)'>" + pageList[i] + "</a></li>";
+			}
+		}
+		lis += "<li class='page next' start='" + ((pageNum + 1) * pageSize) + "' onclick='"+clickName+"'>></li>";
+		doc.html(lis);
+	}
+	
+</script>
 </html>
