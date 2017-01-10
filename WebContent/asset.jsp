@@ -354,7 +354,7 @@
 								<div class="table-footer">
 									<h6>从1条到10条的记录 总显示记录数为72条</h6>
 									<div class="pageWrap clearfix">
-										<ul class="fr">
+										<ul class="fr" id="page1">
 											<li class="page prev"><</li>
 											<li class="active">1</li>
 											<li>2</li>
