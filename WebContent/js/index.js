@@ -413,7 +413,11 @@ $(function () {
                         value: 20,
                         itemStyle: {
                             normal: {
-                                opacity:0
+                                color: new echarts.graphic.LinearGradient(1, 0, 1, 1, [{
+                                    offset: 0, color: 'transparent' // 0% 处的颜色
+                                }, {
+                                    offset: 1, color: '#28a4d8' // 100% 处的颜色
+                                }], false)
                             }
                         }
                     }
@@ -457,10 +461,11 @@ $(function () {
                         },
                         itemStyle: {
                             normal: {
-                                color: new echarts.graphic.RadialGradient(0.5, 0.8, 8, [{
-                                    offset: 0, color: '#093456' // 0% 处的颜色
+
+                                color: new echarts.graphic.LinearGradient(1, 0, 1, 1, [{
+                                    offset: 0, color: '#28a4d8' // 0% 处的颜色
                                 }, {
-                                    offset: 1, color: '#fff' // 100% 处的颜色
+                                    offset: 1, color: 'transparent' // 100% 处的颜色
                                 }], false)
                             }
                         }
