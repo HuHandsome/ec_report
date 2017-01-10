@@ -87,8 +87,8 @@
 			<!--middle start-->
 			<div class="container-fluid content">
 				<div class="search-pan">
-					<span>查询</span>
-					<input class="sp-input" type="text">
+					<span class="glyphicon glyphicon-search"></span>
+					<input class="sp-input" type="text" placeholder="搜索内容...">
 					<button>搜索</button>
 				</div>
 				<div class="row">
