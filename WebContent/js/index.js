@@ -371,4 +371,115 @@ $(function () {
     });
 
 
+    //页头半环形表
+    var hoption = {
+        series: [
+            {
+                type: 'pie',
+                radius: ['60%', '80%'],
+                startAngle:233,
+                silent: true,
+                label: {
+                    normal: {
+                        position: 'center',
+                        show: false
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {
+                        value: 50,
+                        itemStyle: {
+                            normal: {
+                                color:'#fd342d',
+                                borderColor:'#198be4'
+                            }
+                        }
+                    },
+                    {
+                        value:30,
+                        itemStyle: {
+                            normal: {
+                                color:'transparent',
+                                borderColor:'#198be4'
+                            }
+                        }
+                    },
+                    {
+                        value: 20,
+                        itemStyle: {
+                            normal: {
+                                opacity:0
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                name: '问题资产',
+                type: 'pie',
+                radius: ['0', '50%'],
+                silent: true,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'center',
+                        textStyle: {
+                            fontSize: '14',
+                            fontWeight: 'bold',
+                            color: '#198be4'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {
+                        value: 100,
+                        name: '所有资产',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'center',
+                                textStyle: {
+                                    fontSize: '14',
+                                    fontWeight: 'bold',
+                                    color: '#FFF'
+                                }
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.RadialGradient(0.5, 0.8, 8, [{
+                                    offset: 0, color: '#093456' // 0% 处的颜色
+                                }, {
+                                    offset: 1, color: '#fff' // 100% 处的颜色
+                                }], false)
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
+    var harr = $('.half-c');
+
+    $.each(harr,function(k,v){
+        var h = echarts.init(v);
+        var n = parseInt($(v).attr('data-num'));
+        hoption.series[1].name = $(v).attr('data-name');
+        hoption.series[1].data[0].name = $(v).attr('data-name');
+        hoption.series[0].data[0].value = n*0.8;
+        hoption.series[0].data[1].value = 80 - n*0.8;
+        h.setOption(hoption);
+    })
+
 });
