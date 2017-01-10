@@ -311,5 +311,5 @@ public class AssetController {
 		String result = RequestUtils.callHttp(path, param);
 		return result;
 	}
-
+	
 }
