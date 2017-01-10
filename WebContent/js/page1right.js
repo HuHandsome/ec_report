@@ -45,7 +45,7 @@ function showLeftTable(str){
 		$.each(data.data, function(i,e){
 			tableStr += '<tr>' +
 				'<td>'+ (e.id + 1) +'</td>' +
-				'<td><span class="icon" data-target="tb2">a</span></td>' +
+				'<td><span class="icon" data-target="tb2">></span></td>' +
 				'<td>'+ e.d.D +'</td>' +
 				'<td>'+ e.speed +'</td>' +
 				'<td>'+ e.speed +'</td>' +
