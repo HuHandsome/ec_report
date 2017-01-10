@@ -19,6 +19,7 @@
 		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/common_top.js"></script>
+		<script type="text/javascript" src="js/index_temp.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -87,8 +88,8 @@
 			<!--middle start-->
 			<div class="container-fluid content">
 				<div class="search-pan">
-					<span>查询</span>
-					<input class="sp-input" type="text">
+					<span class="glyphicon glyphicon-search"></span>
+					<input class="sp-input" type="text" placeholder="搜索内容...">
 					<button onclick='search()'>搜索</button>
 				</div>
 				<div class="row">
@@ -219,11 +220,11 @@
 									<ul class="">
 										<li class="clearfix">
 											<p class="fl">ip总数</p>
-											<em class="fr yello" id="ip_total">674</em>
+											<em class="fr yello">674</em>
 										</li>
 										<li class="clearfix">
-											<p class="fl">网站总数</p>
-											<em class="fr yello" id="i_total">674</em>
+											<p class="fl">ip总数</p>
+											<em class="fr yello">674</em>
 										</li>
 									</ul>
 								</div>
@@ -238,13 +239,17 @@
 							<span class="br"></span>
 							<div class="styleLandR clearfix">
 								<h5>
-									<p class="orange">资产总数</p>
+									<p class="orange">探测总数</p>
 								</h5>
 								<div class="styleLandR_right">
 								<ul class="">
 									<li class="clearfix">
 										<p class="fl">ip总数</p>
-										<em class="fr orange" id="s_total">674</em>
+										<em class="fr orange">674</em>
+									</li>
+									<li class="clearfix">
+										<p class="fl">ip总数</p>
+										<em class="fr orange">674</em>
 									</li>
 								</ul>
 								</div>
@@ -267,7 +272,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr class="nodata" id="asset_areas">
+										<tr class="nodata">
 											<td colspan="100">没有发现资产</td>
 										</tr>
 									</tbody>
@@ -291,7 +296,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr class="nodata" id="asset_users">
+										<tr class="nodata">
 											<td colspan="100">没有发现资产</td>
 										</tr>
 									</tbody>
@@ -314,7 +319,7 @@
 											<td>频率</td>
 										</tr>
 									</thead>
-									<tbody id="asset_tags">
+									<tbody>
 										<tr>
 											<td>jQuery</td>
 											<td>277</td>
@@ -348,7 +353,7 @@
 									</tbody>
 								</table>
 								<div class="table-footer">
-									<h6>从1条到10条的记录 总显示记录数为<span id="total_count">72</span>条</h6>
+									<h6>从1条到10条的记录 总显示记录数为72条</h6>
 									<div class="pageWrap clearfix">
 										<ul class="fr" id="page1">
 											<li class="page prev"><</li>
