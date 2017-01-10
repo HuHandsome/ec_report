@@ -7,6 +7,8 @@ $(function () {
     table_btn.on('click', function () {
         var _self = $(this);
 
+        _self.toggleClass('glyphicon-chevron-right');
+        _self.toggleClass('glyphicon-chevron-down');
         var id = _self.attr('data-target');
 
         var hide = _self.parents('.table').find('#' + id);
@@ -17,12 +19,14 @@ $(function () {
 
     // 指定图表的配置项和数据
     var pie1option = {
+
         series: [
             {
                 name: '访问来源',
                 type: 'pie',
                 radius: ['74%', '90%'],
                 avoidLabelOverlap: false,
+                clockwise: false,
                 silent: true,
                 label: {
                     normal: {
@@ -35,15 +39,7 @@ $(function () {
                     }
                 },
                 data: [
-                    {
-                        value: 25,
-                        name: 'empty',
-                        itemStyle: {
-                            normal: {
-                                opacity: 0
-                            }
-                        }
-                    },
+
                     {
                         value: 75,
                         name: '资产总数',
@@ -57,6 +53,15 @@ $(function () {
                                 borderColor: '#198be4'
                             }
                         }
+                    },
+                    {
+                        value: 25,
+                        name: 'empty',
+                        itemStyle: {
+                            normal: {
+                                opacity: 0
+                            }
+                        }
                     }
                 ]
             },
@@ -65,6 +70,7 @@ $(function () {
                 type: 'pie',
                 radius: ['54%', '70%'],
                 avoidLabelOverlap: false,
+                clockwise: false,
                 silent: true,
                 label: {
                     normal: {
@@ -77,15 +83,6 @@ $(function () {
                     }
                 },
                 data: [
-                    {
-                        value: 50,
-                        name: 'empty',
-                        itemStyle: {
-                            normal: {
-                                opacity: 0
-                            }
-                        }
-                    },
                     {
                         value: 50,
                         name: '正常资产',
@@ -99,6 +96,15 @@ $(function () {
                                 borderColor: '#0fa055'
                             }
                         }
+                    },
+                    {
+                        value: 50,
+                        name: 'empty',
+                        itemStyle: {
+                            normal: {
+                                opacity: 0
+                            }
+                        }
                     }
                 ]
             },
@@ -107,6 +113,7 @@ $(function () {
                 type: 'pie',
                 radius: ['34%', '50%'],
                 avoidLabelOverlap: false,
+                clockwise: false,
                 silent: true,
                 label: {
                     normal: {
@@ -119,15 +126,7 @@ $(function () {
                     }
                 },
                 data: [
-                    {
-                        value: 70,
-                        name: 'empty',
-                        itemStyle: {
-                            normal: {
-                                opacity: 0
-                            }
-                        }
-                    },
+
                     {
                         value: 30,
                         name: '问题资产',
@@ -141,6 +140,15 @@ $(function () {
                                 borderColor: '#e2c948'
                             }
                         }
+                    },
+                    {
+                        value: 70,
+                        name: 'empty',
+                        itemStyle: {
+                            normal: {
+                                opacity: 0
+                            }
+                        }
                     }
                 ]
             },
@@ -149,6 +157,7 @@ $(function () {
                 type: 'pie',
                 radius: ['14%', '30%'],
                 avoidLabelOverlap: false,
+                clockwise: false,
                 silent: true,
                 label: {
                     normal: {
@@ -162,15 +171,6 @@ $(function () {
                 },
                 data: [
                     {
-                        value: 85,
-                        name: 'empty',
-                        itemStyle: {
-                            normal: {
-                                opacity: 0
-                            }
-                        }
-                    },
-                    {
                         value: 15,
                         name: '问题单位',
                         itemStyle: {
@@ -183,7 +183,16 @@ $(function () {
                                 borderColor: '#c06516'
                             }
                         }
-                    }
+                    },
+                    {
+                        value: 85,
+                        name: 'empty',
+                        itemStyle: {
+                            normal: {
+                                opacity: 0
+                            }
+                        }
+                    },
                 ]
             }
         ]
@@ -194,62 +203,65 @@ $(function () {
 
 
     //主页中间线表
-    var line1 = echarts.init($('.top-charts-c').get(0));
 
-    var line1x = function (a) {
-        var arr = [];
-        for (var i = 1; i <= a; i++) {
-            arr.push(i);
-        }
-        return arr;
-    };
+    if($('.top-charts-c').length>0){
+        var line1 = echarts.init($('.top-charts-c').get(0));
 
-    var line1y = function (a) {
-        var arr = [];
-        for (var i = 1; i <= a; i++) {
-            arr.push(parseInt(Math.random(0, 1) * 1000));
-        }
-        return arr;
-    };
-
-    var line1option = {
-        tooltip: {
-            trigger: 'axis'
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis: [
-            {
-                type: 'category',
-                boundaryGap: false,
-                axisTick: {
-                    interval: 10
-                },
-                data: line1x(130)
+        var line1x = function (a) {
+            var arr = [];
+            for (var i = 1; i <= a; i++) {
+                arr.push(i);
             }
-        ],
-        yAxis: [
-            {
-                type: 'value'
-            }
-        ],
-        series: [
-            {
-                name: '邮件营销',
-                type: 'line',
-                stack: '总量',
-                areaStyle: {normal: {}},
-                data: line1y(130)
-            }
-        ]
-    };
+            return arr;
+        };
 
-    line1.setOption(line1option);
+        var line1y = function (a) {
+            var arr = [];
+            for (var i = 1; i <= a; i++) {
+                arr.push(parseInt(Math.random(0, 1) * 1000));
+            }
+            return arr;
+        };
+
+        var line1option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    axisTick: {
+                        interval: 10
+                    },
+                    data: line1x(130)
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '邮件营销',
+                    type: 'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data: line1y(130)
+                }
+            ]
+        };
+
+        line1.setOption(line1option);
     //end
+    }
 
     //页头圆形表
     var carr = $('.mc-item');
@@ -348,6 +360,7 @@ $(function () {
     };
 
     $.each(carr, function (k, v) {
+        console.log(v);
         var c = echarts.init(v);
         var n = parseInt($(v).attr('data-num'));
         c1option.series[1].name = $(v).attr('data-name');
