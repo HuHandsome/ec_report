@@ -82,6 +82,20 @@ function showLeftTable(str, li){
 		});
 		table.html(tableStr);
 		initPage($("#page1"), data.recordsTotal, 10, pageNum, "showLeftTable(255, this)");
+		var table_btn = $('.table').find('.icon');
+
+	    table_btn.on('click', function () {
+	        var _self = $(this);
+
+	        _self.toggleClass('glyphicon-chevron-right');
+	        _self.toggleClass('glyphicon-chevron-down');
+	        var id = _self.attr('data-target');
+
+	        var hide = _self.parents('.table').find('#' + id);
+
+	        hide.toggleClass('hide');
+
+	    });
 	});
 }
 
