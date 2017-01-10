@@ -20,7 +20,7 @@ $(function(){
 		ul.html(li);
 	});
 	
-	showLeftTable(255);
+	showLeftTable("255");
 });
 
 
@@ -30,7 +30,7 @@ function showLeftTable(str){
 	if(!isBlank(str)){
 		param.cid = str;
 	}
-	var table = $(".table-c table");
+	var table = $(".table-c table tbody");
 	var tableStr = '<tr>' + 
 	 '<th></th>' + 
 	 '<th></th>' + 
@@ -49,7 +49,7 @@ function showLeftTable(str){
 				'<td>'+ e.d.D +'</td>' +
 				'<td>'+ e.speed +'</td>' +
 				'<td>'+ e.speed +'</td>' +
-				'<td>'+ formatDate(e.t, 'yyyy-MM-dd hh:mm:ss') +'</td>' +
+				'<td>'+ formatDate(new Date(e.t), 'yyyy-MM-dd hh:mm:ss') +'</td>' +
 				'<td>正常</td>' +
 			'</tr>';
 			tableStr += '<tr class="hide" id="tb2">' +
@@ -62,6 +62,7 @@ function showLeftTable(str){
 				'</td>' +
 				'</tr>';
 		});
+		table.html(tableStr);
 	});
 }
 
