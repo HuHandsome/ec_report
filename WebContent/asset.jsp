@@ -8,7 +8,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>×Ê²ú¹ÜÀí</title>
+		<title>èµ„äº§ç®¡ç†</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.min.css" />
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
@@ -30,53 +30,53 @@
 						<div class="nav-icon"></div>
 						<div class="logo">
 							<div class="pic"></div>
-							<a href="javascript:void(0)">ÌìÑÜ</a>
+							<a href="javascript:void(0)">å¤©è¡</a>
 						</div>
 					</div>
 					<div class="second-part header-part">
 						<div class="pie1"></div>
 						<div class="pie1-label" id="count_asset">
 							<ul>
-								<li><span class="color-normal">×Ê²ú×ÜÊý</span>¡­¡­¡­¡­12359</li>
-								<li><span class="color-success">Õý³£×Ê²ú</span>¡­¡­¡­¡­12000</li>
-								<li><span class="color-warning">ÎÊÌâ×Ê²ú</span>¡­¡­¡­¡­359</li>
-								<li><span class="color-danger">ÎÊÌâµ¥Î»</span>¡­¡­¡­¡­59</li>
+								<li><span class="color-normal">èµ„äº§æ€»æ•°</span>â€¦â€¦â€¦â€¦12359</li>
+								<li><span class="color-success">æ­£å¸¸èµ„äº§</span>â€¦â€¦â€¦â€¦12000</li>
+								<li><span class="color-warning">é—®é¢˜èµ„äº§</span>â€¦â€¦â€¦â€¦359</li>
+								<li><span class="color-danger">é—®é¢˜å•ä½</span>â€¦â€¦â€¦â€¦59</li>
 							</ul>
 						</div>
 					</div>
 					<div class="third-part header-part">
-						<div id="asset0" class="c1 mc-item" data-name="ËùÓÐ×Ê²ú" data-num="80">
+						<div id="asset0" class="c1 mc-item" data-name="æ‰€æœ‰èµ„äº§" data-num="80">
 
 						</div>
-						<div id="asset1" class="c2 mc-item" data-name="ËùÓÐ×Ê²ú" data-num="70">
+						<div id="asset1" class="c2 mc-item" data-name="æ‰€æœ‰èµ„äº§" data-num="70">
 
 						</div>
-						<div id="asset2" class="c3 mc-item" data-name="ËùÓÐ×Ê²ú" data-num="60">
+						<div id="asset2" class="c3 mc-item" data-name="æ‰€æœ‰èµ„äº§" data-num="60">
 
 						</div>
-						<div id="asset3" class="c4 mc-item" data-name="ËùÓÐ×Ê²ú" data-num="50">
+						<div id="asset3" class="c4 mc-item" data-name="æ‰€æœ‰èµ„äº§" data-num="50">
 
 						</div>
-						<div id="asset4" class="c5 mc-item" data-name="ËùÓÐ×Ê²ú" data-num="44">
+						<div id="asset4" class="c5 mc-item" data-name="æ‰€æœ‰èµ„äº§" data-num="44">
 
 						</div>
-						<div id="asset5" class="c6 mc-item" data-name="ËùÓÐ×Ê²ú" data-num="11">
+						<div id="asset5" class="c6 mc-item" data-name="æ‰€æœ‰èµ„äº§" data-num="11">
 
 						</div>
 					</div>
 					<div class="last-part header-part">
 						<div class="item">
-							<div id="half0" class="half-c" data-name="ËùÓÐ×Ê²ú" data-num="80" >
+							<div id="half0" class="half-c" data-name="æ‰€æœ‰èµ„äº§" data-num="80" >
 
 							</div>
 						</div>
 						<div class="item">
-							<div id="half1" class="half-c" data-name="ËùÓÐ×Ê²ú" data-num="50" >
+							<div id="half1" class="half-c" data-name="æ‰€æœ‰èµ„äº§" data-num="50" >
 
 							</div>
 						</div>
 						<div class="item">
-							<div id="half2" class="half-c" data-name="ËùÓÐ×Ê²ú" data-num="20" >
+							<div id="half2" class="half-c" data-name="æ‰€æœ‰èµ„äº§" data-num="20" >
 
 							</div>
 						</div>
@@ -92,7 +92,7 @@
 					<button>æœç´¢</button>
 				</div>
 				<div class="row">
-					<h6>ËÑË÷½á¹û£ºÕÒµ½<span id="totalSize">910</span>Ìõ  ºÄÊ±:<span>40</span>ºÁÃë</h6>
+					<h6>æœç´¢ç»“æžœï¼šæ‰¾åˆ°<span id="totalSize">910</span>æ¡  è€—æ—¶:<span>40</span>æ¯«ç§’</h6>
 					<!--left start-->
 					<div class="col-md-9 contentLeft">
 						<ul id="list">
@@ -100,8 +100,8 @@
 							<li class="col-md-12">
 								<div class="col-md-6">
 									<p><img src=" img/icon_ip.png" />218.57.139.18</p>
-									<p class="relationIp">218.57.139.18<a>¹ØÁªÍøÕ¾</a></p>
-									<p>¸üÐÂÊ±¼ä£º2016/01/05 12:29</p>
+									<p class="relationIp">218.57.139.18<a>å…³è”ç½‘ç«™</a></p>
+									<p>æ›´æ–°æ—¶é—´ï¼š2016/01/05 12:29</p>
 									<p class="labelings">
 										<span class="label">Microsoft HTTPAPI 2.0</span>
 									</p>
@@ -120,29 +120,8 @@
 							<li class="col-md-12">
 								<div class="col-md-6">
 									<p><img src=" img/icon_ip.png" />218.57.139.18</p>
-									<p class="relationIp">218.57.139.18<a>¹ØÁªÍøÕ¾</a></p>
-									<p>¸üÐÂÊ±¼ä£º2016/01/05 12:29</p>
-									<p class="labelings">
-										<span class="label">Microsoft HTTPAPI 2.0</span>
-										<span class="label">Mi2.0</span>
-									</p>
-								</div>
-								<div class="col-md-6 ">
-									<p>218.57.139.18218.57.139.18</p>
-									<p>218.57.139.18218.57.139.18</p>
-									<p>218.57.139.18218.57.139.18</p>
-									<p>218.57.139.18218.57.139.18</p>
-									<p>218.57.139.18218.57.139.18</p>
-									<p>218.57.139.18218.57.139.18</p>
-								</div>											
-							</li>
-							<!--li end-->
-							<!--li start-->
-							<li class="col-md-12">
-								<div class="col-md-6">
-									<p><img src=" img/icon_ip.png" />218.57.139.18</p>
-									<p class="relationIp">218.57.139.18<a>¹ØÁªÍøÕ¾</a></p>
-									<p>¸üÐÂÊ±¼ä£º2016/01/05 12:29</p>
+									<p class="relationIp">218.57.139.18<a>å…³è”ç½‘ç«™</a></p>
+									<p>æ›´æ–°æ—¶é—´ï¼š2016/01/05 12:29</p>
 									<p class="labelings">
 										<span class="label">Microsoft HTTPAPI 2.0</span>
 										<span class="label">Mi2.0</span>
@@ -162,8 +141,8 @@
 							<li class="col-md-12">
 								<div class="col-md-6">
 									<p><img src=" img/icon_ip.png" />218.57.139.18</p>
-									<p class="relationIp">218.57.139.18<a>¹ØÁªÍøÕ¾</a></p>
-									<p>¸üÐÂÊ±¼ä£º2016/01/05 12:29</p>
+									<p class="relationIp">218.57.139.18<a>å…³è”ç½‘ç«™</a></p>
+									<p>æ›´æ–°æ—¶é—´ï¼š2016/01/05 12:29</p>
 									<p class="labelings">
 										<span class="label">Microsoft HTTPAPI 2.0</span>
 										<span class="label">Mi2.0</span>
@@ -183,7 +162,28 @@
 							<li class="col-md-12">
 								<div class="col-md-6">
 									<p><img src=" img/icon_ip.png" />218.57.139.18</p>
-									<p class="relationIp">218.57.139.18<a>¹ØÁªÍøÕ¾</a></p>
+									<p class="relationIp">218.57.139.18<a>å…³è”ç½‘ç«™</a></p>
+									<p>æ›´æ–°æ—¶é—´ï¼š2016/01/05 12:29</p>
+									<p class="labelings">
+										<span class="label">Microsoft HTTPAPI 2.0</span>
+										<span class="label">Mi2.0</span>
+									</p>
+								</div>
+								<div class="col-md-6 ">
+									<p>218.57.139.18218.57.139.18</p>
+									<p>218.57.139.18218.57.139.18</p>
+									<p>218.57.139.18218.57.139.18</p>
+									<p>218.57.139.18218.57.139.18</p>
+									<p>218.57.139.18218.57.139.18</p>
+									<p>218.57.139.18218.57.139.18</p>
+								</div>											
+							</li>
+							<!--li end-->
+							<!--li start-->
+							<li class="col-md-12">
+								<div class="col-md-6">
+									<p><img src=" img/icon_ip.png" />218.57.139.18</p>
+									<p class="relationIp">218.57.139.18<a>å…³è”ç½‘ç«™</a></p>
 									<p>218.57.139.18218.57.139.18</p>
 									<p class="labelings">
 										<span class="label">Microsoft HTTPAPI 2.0</span>
@@ -213,16 +213,16 @@
 							<span class="br"></span>
 							<div class="styleLandR clearfix">
 								<h5>
-									<p class="yello">Ì½²â×ÜÊý</p>
+									<p class="yello">æŽ¢æµ‹æ€»æ•°</p>
 								</h5>
 								<div class="styleLandR_right">
 									<ul class="">
 										<li class="clearfix">
-											<p class="fl">ip×ÜÊý</p>
+											<p class="fl">ipæ€»æ•°</p>
 											<em class="fr yello">674</em>
 										</li>
 										<li class="clearfix">
-											<p class="fl">ip×ÜÊý</p>
+											<p class="fl">ipæ€»æ•°</p>
 											<em class="fr yello">674</em>
 										</li>
 									</ul>
@@ -238,16 +238,16 @@
 							<span class="br"></span>
 							<div class="styleLandR clearfix">
 								<h5>
-									<p class="orange">Ì½²â×ÜÊý</p>
+									<p class="orange">æŽ¢æµ‹æ€»æ•°</p>
 								</h5>
 								<div class="styleLandR_right">
 								<ul class="">
 									<li class="clearfix">
-										<p class="fl">ip×ÜÊý</p>
+										<p class="fl">ipæ€»æ•°</p>
 										<em class="fr orange">674</em>
 									</li>
 									<li class="clearfix">
-										<p class="fl">ip×ÜÊý</p>
+										<p class="fl">ipæ€»æ•°</p>
 										<em class="fr orange">674</em>
 									</li>
 								</ul>
@@ -265,14 +265,14 @@
 								<table border="" cellspacing="" cellpadding="">
 									<thead>
 										<tr>
-											<td>ÇøÓò</td>
-											<td>Ö÷»ú</td>
-											<td>ÆµÂÊ</td>
+											<td>åŒºåŸŸ</td>
+											<td>ä¸»æœº</td>
+											<td>é¢‘çŽ‡</td>
 										</tr>
 									</thead>
 									<tbody>
 										<tr class="nodata">
-											<td colspan="100">Ã»ÓÐ·¢ÏÖ×Ê²ú</td>
+											<td colspan="100">æ²¡æœ‰å‘çŽ°èµ„äº§</td>
 										</tr>
 									</tbody>
 								</table>
@@ -289,14 +289,14 @@
 								<table border="" cellspacing="" cellpadding="">
 									<thead>
 										<tr>
-											<td>ÈËÔ±</td>
-											<td>Ö÷»ú</td>
-											<td>ÆµÂÊ</td>
+											<td>äººå‘˜</td>
+											<td>ä¸»æœº</td>
+											<td>é¢‘çŽ‡</td>
 										</tr>
 									</thead>
 									<tbody>
 										<tr class="nodata">
-											<td colspan="100">Ã»ÓÐ·¢ÏÖ×Ê²ú</td>
+											<td colspan="100">æ²¡æœ‰å‘çŽ°èµ„äº§</td>
 										</tr>
 									</tbody>
 								</table>
@@ -313,9 +313,9 @@
 								<table border="" cellspacing="" cellpadding="">
 									<thead>
 										<tr>
-											<td>±êÇ©</td>
-											<td>Ö÷»ú</td>
-											<td>ÆµÂÊ</td>
+											<td>æ ‡ç­¾</td>
+											<td>ä¸»æœº</td>
+											<td>é¢‘çŽ‡</td>
 										</tr>
 									</thead>
 									<tbody>
@@ -352,7 +352,7 @@
 									</tbody>
 								</table>
 								<div class="table-footer">
-									<h6>´Ó1Ìõµ½10ÌõµÄ¼ÇÂ¼ ×ÜÏÔÊ¾¼ÇÂ¼ÊýÎª72Ìõ</h6>
+									<h6>ä»Ž1æ¡åˆ°10æ¡çš„è®°å½• æ€»æ˜¾ç¤ºè®°å½•æ•°ä¸º72æ¡</h6>
 									<div class="pageWrap clearfix">
 										<ul class="fr">
 											<li class="page prev"><</li>
