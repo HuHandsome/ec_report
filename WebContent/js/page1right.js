@@ -63,14 +63,14 @@ function showLeftTable(str, li){
 		$.each(data.data, function(i,e){
 			tableStr += '<tr>' +
 				'<td>'+ (e.id + 1) +'</td>' +
-				'<td><span class="icon" data-target="tb2">></span></td>' +
+				'<td><span class="icon" data-target="tb'+i+'">></span></td>' +
 				'<td>'+ e.d.D +'</td>' +
 				'<td>'+ e.speed +'</td>' +
 				'<td>'+ e.speed +'</td>' +
 				'<td>'+ formatDate(new Date(e.t), 'yyyy-MM-dd hh:mm:ss') +'</td>' +
 				'<td>正常</td>' +
 			'</tr>';
-			tableStr += '<tr class="hide" id="tb2">' +
+			tableStr += '<tr class="hide" id="tb'+i+'">' +
 				'<td colspan="7">' +
 					'<div class="more-info">' +
 						'<p>浏览器标识:'+e.i.UA+'</p>' +
