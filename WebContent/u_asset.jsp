@@ -122,7 +122,7 @@
 										</select>
 									</div>
 									<div class="pageWrap clearfix">
-										<ul class="fr">
+										<ul class="fr" id="page1">
 											<li class="page prev"><</li>
 											<li class="active">1</li>
 											<li>2</li>
