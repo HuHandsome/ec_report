@@ -1,16 +1,19 @@
 body {
   background: #0C1C35 url("../img/ybp_bj.jpg") center center no-repeat;
 }
+
 .fl {
   float: left;
 }
+
 .fr {
   float: right;
 }
+
 @bluea: #1A365B; //边框颜色
 @blueb: #0372CC; //边框四个角的颜色
 @yello: #FDC70F; //黄色字体
-@orange:#FF7C03;//橘色字体
+@orange: #FF7C03; //橘色字体
 @gray: #A9ADB9; //字体主灰色
 .content {
   position: relative;
@@ -21,12 +24,12 @@ body {
     color: @gray;
   }
   .contentLeft {
-    padding:0;
+    padding: 0;
     ul li {
       color: @gray;
       width: 98%;
       height: auto;
-      background: rgba(225,225,225,0.21);
+      background: rgba(225, 225, 225, 0.21);
       padding: 1%;
       margin-bottom: 10px;
       p {
@@ -62,63 +65,75 @@ body {
     padding: 0;
     height: 800px;
     div.p-box {
-      margin-bottom:10px;
+      margin-bottom: 10px;
       position: relative;
       height: 80px;
       width: 100%;
       border: 1px solid @bluea;
-      .styleTandB{
-        table{
-          border:0px;
-          width:96%;
-          margin:2%;
-          color:@blueb;
+      .styleTandB {
+        table {
+          border: 0px;
+          width: 96%;
+          margin: 2%;
+          color: @blueb;
 
-          thead tr{
-            background:#0D2A4C;
-            border:0px;
-            border-bottom:2px solid @bluea;
-            td{text-align:center; border:0px;}
-            td:nth-child(1){
-              width:60%;
+          thead tr {
+            background: #0D2A4C;
+            border: 0px;
+            border-bottom: 2px solid @bluea;
+            td {
+              text-align: center;
+              border: 0px;
+            }
+            td:nth-child(1) {
+              width: 60%;
 
             }
           }
-          tbody tr{
-            border:0px;
-            border-bottom:1px solid @bluea;
-            td{text-align:center; border:0px;}
-            td:nth-child(1){
-              width:60%;
+          tbody tr {
+            border: 0px;
+            border-bottom: 1px solid @bluea;
+            td {
+              text-align: center;
+              border: 0px;
+            }
+            td:nth-child(1) {
+              width: 60%;
 
             }
           }
-          tbody tr.nodata{
-            border-bottom:0;
-            td{
-              text-align:left;
-              color:@gray;
-              width:100% !important;
+          tbody tr.nodata {
+            border-bottom: 0;
+            td {
+              text-align: left;
+              color: @gray;
+              width: 100% !important;
             }
           }
 
         }
-        div.table-footer{
-          width:96%;
-          margin-left:2%;
-          ul{
-            li{
-              cursor:pointer;
-              float:left;
+        div.table-footer {
+          width: 96%;
+          margin-left: 2%;
+          ul {
+            li {
+              cursor: pointer;
+              float: left;
               color: @gray;
-              height:20px;
+              height: 20px;
               width: 20px;
-              margin-right:5px;
-              text-align:center;
-              line-height:20px;
+              margin-right: 5px;
+              text-align: center;
+              line-height: 20px;
             }
-            li.active{background:@bluea;}
-            li.page{color:@blueb;border-radius:50%;background:@bluea;}
+            li.active {
+              background: @bluea;
+            }
+            li.page {
+              color: @blueb;
+              border-radius: 50%;
+              background: @bluea;
+            }
           }
         }
 
@@ -130,37 +145,41 @@ body {
         width: 96%;
         padding-left: 2%;
         h5 {
-          text-align:center;
+          text-align: center;
           margin: 0;
           height: 100%;
           width: 30%;
           float: left;
           border-right: 1px solid @bluea;
-          position:relative;
-          p{
-            position:absolute;
-            padding:0px;
-            top:50%;
-            left:50%;
-            margin-left:-28px;
-            margin-top:-7px;
+          position: relative;
+          p {
+            position: absolute;
+            padding: 0px;
+            top: 50%;
+            left: 50%;
+            margin-left: -28px;
+            margin-top: -7px;
           }
-          p.yello{color:@yello;}
-          p.orange{color:@orange;}
+          p.yello {
+            color: @yello;
+          }
+          p.orange {
+            color: @orange;
+          }
         }
-        div.styleLandR_right{
+        div.styleLandR_right {
           float: right;
-          position:relative;
-          height:100%;
+          position: relative;
+          height: 100%;
           width: 64%;
           margin-top: 5px;
           ul {
-            position:absolute;
-            width:100%;
+            position: absolute;
+            width: 100%;
             top: 50%;
-            left:50%;
-            margin-top:-12%;
-            margin-left:-50% ;
+            left: 50%;
+            margin-top: -12%;
+            margin-left: -50%;
             li {
               p {
                 color: @gray;
@@ -179,7 +198,7 @@ body {
   }
 }
 
-.header-bk{
+.header-bk {
   background: url("../img/top_bj.png") no-repeat center center;
   background-size: 100% 100%;
   width: 98%;
@@ -188,19 +207,19 @@ body {
   z-index: 1;
 }
 
-#header{
+#header {
   width: 98%;
   position: relative;
   z-index: 10;
   overflow: hidden;
   height: 180px;
-  .header-part{
+  .header-part {
     float: left;
   }
-  .first-part{
+  .first-part {
     width: 16%;
     position: relative;
-    .nav-icon{
+    .nav-icon {
       cursor: pointer;
       height: 62px;
       background-image: url("../img/nave.png");
@@ -208,17 +227,17 @@ body {
       position: absolute;
       left: 20px;
       top: 90px;
-      &:hover{
+      &:hover {
         background-image: url("../img/nave_on.png");
       }
     }
-    .logo{
+    .logo {
       height: 100px;
       margin-left: 120px;
       margin-top: 30px;
       position: relative;
     }
-    .pic{
+    .pic {
       width: 40px;
       height: 40px;
       margin-top: 10px;
@@ -226,30 +245,30 @@ body {
       background: url("../img/logo.png") no-repeat;
       background-size: contain;
     }
-    a{
+    a {
       font-size: 40px;
       color: #ffffff;
       text-decoration: none;
     }
   }
-  .second-part{
+  .second-part {
     width: 18%;
     float: left;
     height: 150px;
-    .pie1{
+    .pie1 {
       float: left;
       margin-top: 10px;
       height: 150px;
       width: 150px;
     }
-    .pie1-label{
+    .pie1-label {
       float: left;
-      ul{
+      ul {
         padding: 0;
         margin: 25px 0;
         overflow: hidden;
         list-style: none;
-        li{
+        li {
           margin: 10px;
           font-size: 14px;
           color: #8c92a2;
@@ -257,10 +276,10 @@ body {
       }
     }
   }
-  .third-part{
+  .third-part {
     width: 39%;
     float: left;
-    .mc-item{
+    .mc-item {
       width: 16%;
       height: 110px;
       background: #8c92a2;
@@ -268,13 +287,13 @@ body {
       float: left;
     }
   }
-  .last-part{
+  .last-part {
     width: 27%;
-    .item{
+    .item {
       float: left;
       width: 33%;
       padding: 10px;
-      .half-c{
+      .half-c {
         width: 100%;
         height: 140px;
         background: #00C1B3;
@@ -284,27 +303,27 @@ body {
   }
 }
 
-#index-page{
+#index-page {
   position: relative;
   z-index: 10;
   color: @gray;
-  &.content{
+  &.content {
     width: 95%;
     margin: 0 auto;
   }
-  .contentLeft{
+  .contentLeft {
     padding: 0;
-    .top-charts{
-      .top-charts-content{
+    .top-charts {
+      .top-charts-content {
         padding: 20px;
-        .title{
+        .title {
           width: 158px;
           height: 43px;
           background-image: url("../img/title_bj.png");
           text-align: center;
           line-height: 43px;
         }
-        .top-charts-c{
+        .top-charts-c {
           width: 97%;
           height: 280px;
           background: rgba(0, 0, 0, .1);
@@ -313,9 +332,9 @@ body {
       }
     }
 
-    .middle-table{
+    .middle-table {
       margin-top: 20px;
-      .title{
+      .title {
         font-size: 24px;
         font-weight: bold;
         padding-left: 20px;
@@ -323,7 +342,7 @@ body {
         color: #ffffff;
         position: relative;
         width: 150px;
-        .up-arrow{
+        .up-arrow {
           background-image: url("../img/table_up.jpg");
           width: 22px;
           height: 22px;
@@ -333,12 +352,12 @@ body {
           cursor: pointer;
         }
       }
-      .toolbar{
+      .toolbar {
         color: @blueb;
         margin: 10px 0;
         height: 40px;
         padding: 2px;
-        .search-bar{
+        .search-bar {
           float: left;
           .input {
             color: #026c96;
@@ -350,7 +369,7 @@ body {
             background: #0b2644;
             outline: none;
           }
-          button{
+          button {
             background: #12457c;
             outline: none;
             height: 24px;
@@ -362,15 +381,15 @@ body {
             cursor: pointer;
           }
         }
-        .pagination-bar{
+        .pagination-bar {
           float: right;
           color: #2bb2e9;
           height: 36px;
           line-height: 36px;
-          .pagi-sel{
+          .pagi-sel {
             margin-right: 30px;
             float: left;
-            .select{
+            .select {
               width: 57px;
               height: 28px;
               border: 1px solid #264c7b;
@@ -378,37 +397,43 @@ body {
               color: #026c96;
             }
           }
-          .pageWrap{
+          .pageWrap {
             float: left;
             margin-top: 8px;
-            ul{
-              li{
-                cursor:pointer;
-                float:left;
+            ul {
+              li {
+                cursor: pointer;
+                float: left;
                 color: @gray;
-                height:20px;
+                height: 20px;
                 width: 20px;
-                margin-right:5px;
-                text-align:center;
-                line-height:20px;
+                margin-right: 5px;
+                text-align: center;
+                line-height: 20px;
                 padding: 0;
               }
-              li.active{background:@bluea;}
-              li.page{color:@blueb;border-radius:50%;background:@bluea;}
+              li.active {
+                background: @bluea;
+              }
+              li.page {
+                color: @blueb;
+                border-radius: 50%;
+                background: @bluea;
+              }
             }
           }
         }
       }
-      .table-c{
+      .table-c {
         width: 100%;
         height: 420px;
-        .table{
+        .table {
           width: 100%;
           font-size: 14px;
           border-right: 1px solid #8c92a2;
           border-bottom: 1px solid #8c92a2;
           border-collapse: collapse;
-          th{
+          th {
             text-align: left;
             padding: 10px 0 10px 10px;
             background: #0d2d54;
@@ -416,19 +441,19 @@ body {
             border-top: 1px solid #8c92a2;
             margin: 0;
           }
-          td{
+          td {
             color: #8c92a2;
             border-left: 1px solid #8c92a2;
             border-top: 1px solid #8c92a2;
             line-height: 24px;
             padding: 0 10px;
           }
-          .more-info{
+          .more-info {
             padding: 10px;
             line-height: 20px;
             font-size: 14px;
             color: #fff;
-            p{
+            p {
               margin-bottom: 8px;
             }
           }
@@ -436,47 +461,45 @@ body {
       }
     }
   }
-  .contentRight{
+  .contentRight {
     padding: 0;
-    .sidebar{
+    .sidebar {
       width: 90%;
       margin: 0 auto;
       padding: 20px;
-      overflow-y: auto;
-      overflow-x: hidden;
-      &::-webkit-scrollbar
-      {
-        width: 16px;
-        height: 16px;
-        background-color: #0d2d54;
-      }
-      /*定义滚动条轨道 内阴影+圆角*/
-      &::-webkit-scrollbar-track
-      {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-        border-radius: 10px;
-        background-color: #0B1A2F;
-      }
-      /*定义滑块 内阴影+圆角*/
-      &::-webkit-scrollbar-thumb
-      {
-        border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-        background-color: #1A365B;
-      }
-      .sidebar-t{
+
+      .sidebar-t {
         text-align: center;
         margin: 10px 0;
         background: url("../img/title_bj.png") repeat;
         height: 44px;
         line-height: 44px;
       }
-      .sidebar-c{
-        .item-list{
-          .item{
+      .sidebar-c {
+        overflow-y: auto;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+          width: 16px;
+          height: 16px;
+          background-color: #0d2d54;
+        }
+        /*定义滚动条轨道 内阴影+圆角*/
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          background-color: #0B1A2F;
+        }
+        /*定义滑块 内阴影+圆角*/
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+          background-color: #1A365B;
+        }
+        .item-list {
+          .item {
             border-bottom: 1px dashed #2e4c72;
             padding: 15px;
-            .item-text{
+            .item-text {
               width: 100%;
               margin-bottom: 12px;
             }
@@ -487,13 +510,13 @@ body {
   }
 }
 
-.search-pan{
+.search-pan {
   height: 30px;
   position: absolute;
   top: -39px;
   color: #026c96;
   border-bottom: 1px solid #264c7b;
-  .sp-input{
+  .sp-input {
     color: #026c96;
     border: none;
     font-size: 12px;
@@ -503,7 +526,7 @@ body {
     outline: none;
     background: transparent;
   }
-  &>button{
+  & > button {
     background: #12457c;
     outline: none;
     height: 24px;
@@ -515,12 +538,13 @@ body {
     cursor: pointer;
   }
 }
-div.special-border{
-  margin-bottom:10px;
+
+div.special-border {
+  margin-bottom: 10px;
   position: relative;
   width: 100%;
   border: 1px solid @bluea;
-  &>span{
+  & > span {
     position: absolute;
     height: 12px;
     width: 10px;
