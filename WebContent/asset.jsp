@@ -89,7 +89,7 @@
 				<div class="search-pan">
 					<span>查询</span>
 					<input class="sp-input" type="text">
-					<button>搜索</button>
+					<button onclick='search()'>搜索</button>
 				</div>
 				<div class="row">
 					<h6>搜索结果：找到<span id="totalSize">910</span>条  耗时:<span>40</span>毫秒</h6>

@@ -2,6 +2,17 @@ $(function(){
 	showIntface8();
 });
 
+/**
+ * 搜索
+ * @returns
+ */
+function search(){
+	var keyword = $("#keyword").val();
+	if(isBlank(keyword)){
+		showIntface8();
+	}
+}
+
 function showIntface8(li){
 	var param = new Object();
 	var pageNum = 1;

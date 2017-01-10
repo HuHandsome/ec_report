@@ -110,8 +110,8 @@
 							<div class="toolbar">
 								<div class="search-bar">
 									<span>模糊查询</span>
-									<input class="input" type="text" placeholder="在这里输入进行检索">
-									<button>搜索</button>
+									<input class="input" id="keyword" type="text" placeholder="在这里输入进行检索">
+									<button onclick='search()'>搜索</button>
 								</div>
 								<div class="pagination-bar">
 									<div class="pagi-sel">

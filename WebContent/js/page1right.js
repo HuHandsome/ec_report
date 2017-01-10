@@ -23,6 +23,16 @@ $(function(){
 	showLeftTable("255");
 });
 
+/**
+ * 搜索
+ * @returns
+ */
+function search(){
+	var keyword = $("#keyword").val();
+	if(isBlank(keyword)){
+		showLeftTable();
+	}
+}
 
 //左下查询列表
 function showLeftTable(str, li){
