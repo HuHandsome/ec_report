@@ -395,7 +395,11 @@ $(function () {
                         value: 50,
                         itemStyle: {
                             normal: {
-                                color:'#fd342d',
+                            	color: new echarts.graphic.LinearGradient(0, 0, 2, 1, [{
+                                    offset: 0, color: '#fd342d' // 0% 处的颜色
+                                }, {
+                                    offset: 1, color: 'transparent' // 100% 处的颜色
+                                }], false),
                                 borderColor:'#198be4'
                             }
                         }
