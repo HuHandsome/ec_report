@@ -25,7 +25,7 @@ $(function(){
 
 
 //左下查询列表
-function showLeftTable(str){
+function showLeftTable(str, li){
 	var param = new Object();
 	if(!isBlank(str)){
 		param.cid = str;
@@ -99,4 +99,35 @@ function formatDate(date,fmt)
     if(new RegExp("("+ k +")").test(fmt))   
   fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));   
   return fmt;   
+}
+
+function initPage(doc, totalSize, pageSize, pageNum, clickName){
+	var pageTotal = Math.ceil(totalSize / pageSize);
+	var pageList = new Array();
+	if(pageNum <= 3){
+		for(var i = 1; i <= pageTotal; i ++){
+			pageList.push(i);
+			if(pageList.length == 5){
+				break;
+			}
+		}
+	}else{
+		//pageList = [(pageNum - 2), (pageNum - 1), pageNum];
+		for(var i = (pageNum - 2); i <= pageTotal; i++){
+			pageList.push(i);
+			if(pageList.length == 5){
+				break;
+			}
+		}
+	}
+	var lis = "<li class=‘page prev’ start='0' onclick='"+clickName+"'><</li>";
+	for(var i in pageList){
+		if(pageList[i] == pageNum){
+			lis += "<li class='active' start='" + (pageList[i] * pageSize) + "' onclick='"+clickName+"'><a href='javascript:void(0)'>" + pageList[i] + "</a></li>";
+		}else{
+			lis += "<li start='" + (pageList[i] * pageSize) + "' onclick='"+clickName+"'><a href='javascript:void(0)'>" + pageList[i] + "</a></li>";
+		}
+	}
+	lis += "<li class='page next' start='" + ((pageNum + 1) * pageSize) + "' onclick='"+clickName+"'>></li>";
+	doc.html(lis);
 }
