@@ -208,7 +208,7 @@
 								威胁详细
 							</div>
 							<div class="sidebar-c">
-								<ul class="item-list">
+								<ul class="item-list" id="table2">
 									<li class="item">
 										<div class="item-text">
 											网站无法正常响应

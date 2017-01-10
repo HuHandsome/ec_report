@@ -1,6 +1,6 @@
 $(function(){
 	//右边列表
-	var ul = $(".right .item-list");
+	var ul = $("#table2");
 	
 	$.post("http://localhost:8080/ec_ui/rest/asset/intface6",function(data){
 		var li = "";
