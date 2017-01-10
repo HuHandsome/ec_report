@@ -280,6 +280,111 @@ $(function () {
         c.setOption(c1option);
     });
 
+    var harr = $('.half-c');
+    //页头半环形表
+    var hoption = {
+        series: [
+            {
+                type: 'pie',
+                radius: ['60%', '80%'],
+                startAngle:233,
+                silent: true,
+                label: {
+                    normal: {
+                        position: 'center',
+                        show: false
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {
+                        value: 50,
+                        itemStyle: {
+                            normal: {
+                                color:'#fd342d',
+                                borderColor:'#198be4'
+                            }
+                        }
+                    },
+                    {
+                        value:30,
+                        itemStyle: {
+                            normal: {
+                                color:'transparent',
+                                borderColor:'#198be4'
+                            }
+                        }
+                    },
+                    {
+                        value: 20,
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(1, 0, 1, 1, [{
+                                    offset: 0, color: 'transparent' // 0% 处的颜色
+                                }, {
+                                    offset: 1, color: '#28a4d8' // 100% 处的颜色
+                                }], false)
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                name: '问题资产',
+                type: 'pie',
+                radius: ['0', '50%'],
+                silent: true,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'center',
+                        textStyle: {
+                            fontSize: '14',
+                            fontWeight: 'bold',
+                            color: '#198be4'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {
+                        value: 100,
+                        name: '所有资产',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'center',
+                                textStyle: {
+                                    fontSize: '14',
+                                    fontWeight: 'bold',
+                                    color: '#FFF'
+                                }
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+
+                                color: new echarts.graphic.LinearGradient(1, 0, 1, 1, [{
+                                    offset: 0, color: '#28a4d8' // 0% 处的颜色
+                                }, {
+                                    offset: 1, color: 'transparent' // 100% 处的颜色
+                                }], false)
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
     $.post("http://127.0.0.1:8080/ec_report/rest/asset/intface1",function(result){
 		var resultData = JSON.parse(result);
 		$("#count_asset").find('ul').empty();
@@ -320,5 +425,28 @@ $(function () {
 	        c1option.series[0].data[1].value = 100 - n;
 	        c.setOption(c1option);
 	    });
+	});
+	
+	$.post("http://127.0.0.1:8080/ec_report/rest/asset/intface3",function(result){
+		var resultData = JSON.parse(result);
+		var total = 0;
+		$.each(resultData.data, function(index, item) {
+			total+=item.v
+		});
+		$.each(resultData.data, function(index, item) {
+			$("#half"+index).attr("data-name",item.n);
+			var ratio = total/100;
+			var value1 = item.v/ratio;
+			$("#half"+index).attr("data-num",value1);
+		});
+		$.each(harr,function(k,v){
+			var h = echarts.init(v);
+			var n = parseInt($(v).attr('data-num'));
+			hoption.series[1].name = $(v).attr('data-name');
+			hoption.series[1].data[0].name = $(v).attr('data-name');
+			hoption.series[0].data[0].value = n*0.8;
+			hoption.series[0].data[1].value = 80 - n*0.8;
+			h.setOption(hoption);
+		})
 	});
 });
