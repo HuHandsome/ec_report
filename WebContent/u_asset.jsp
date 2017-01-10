@@ -21,7 +21,7 @@
 		<script src="js/common_top.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		<div class="container-">
+		<div class="container-fluid">
             <div class="header-bk"></div>
             <div id="header" class="header">
                 <div class="row">
@@ -83,6 +83,11 @@
                 </div>
             </div>
 			<div id="index-page" class="container-fluid content">
+				<div class="search-pan">
+					<span>查询</span>
+					<input class="sp-input" type="text">
+					<button>搜索</button>
+				</div>
 				<div class="row">
 					<div class="col-md-9 contentLeft">
 						<div class="top-charts special-border">

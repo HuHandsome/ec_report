@@ -86,6 +86,11 @@
 			<!--header end-->
 			<!--middle start-->
 			<div class="container-fluid content">
+				<div class="search-pan">
+					<span>鏌ヨ</span>
+					<input class="sp-input" type="text">
+					<button>鎼滅储</button>
+				</div>
 				<div class="row">
 					<h6>搜索结果：找到<span id="totalSize">910</span>条  耗时:<span>40</span>毫秒</h6>
 					<!--left start-->

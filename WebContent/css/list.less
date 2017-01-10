@@ -13,8 +13,10 @@ body {
 @orange:#FF7C03;//橘色字体
 @gray: #A9ADB9; //字体主灰色
 .content {
-    width: 98%;
-    margin: 0 1%;
+    position: relative;
+    z-index: 10;
+    width: 95%;
+    margin: 0 auto;
     h6 {
         color: @gray;
     }
@@ -67,38 +69,38 @@ body {
             border: 1px solid @bluea;
             .styleTandB{
                 table{
-                   border:0px;
-                   width:96%;
-                   margin:2%;
-                   color:@blueb;
+                    border:0px;
+                    width:96%;
+                    margin:2%;
+                    color:@blueb;
 
-                   thead tr{
-                       background:#0D2A4C;
-                       border:0px;
-                       border-bottom:2px solid @bluea;
-                       td{text-align:center; border:0px;}
-                       td:nth-child(1){
-                           width:60%;
+                    thead tr{
+                        background:#0D2A4C;
+                        border:0px;
+                        border-bottom:2px solid @bluea;
+                        td{text-align:center; border:0px;}
+                        td:nth-child(1){
+                            width:60%;
 
-                       }
-                   }
-                   tbody tr{
-                       border:0px;
-                       border-bottom:1px solid @bluea;
-                       td{text-align:center; border:0px;}
-                       td:nth-child(1){
-                           width:60%;
+                        }
+                    }
+                    tbody tr{
+                        border:0px;
+                        border-bottom:1px solid @bluea;
+                        td{text-align:center; border:0px;}
+                        td:nth-child(1){
+                            width:60%;
 
-                       }
-                   }
-                   tbody tr.nodata{
+                        }
+                    }
+                    tbody tr.nodata{
                         border-bottom:0;
                         td{
                             text-align:left;
                             color:@gray;
                             width:100% !important;
                         }
-                   }
+                    }
 
                 }
                 div.table-footer{
@@ -114,7 +116,7 @@ body {
                             margin-right:5px;
                             text-align:center;
                             line-height:20px;
-                            }
+                        }
                         li.active{background:@bluea;}
                         li.page{color:@blueb;border-radius:50%;background:@bluea;}
                     }
@@ -267,25 +269,27 @@ body {
         }
     }
     .last-part{
-      width: 27%;
-      .item{
-        float: left;
-        width: 33%;
-        padding: 10px;
-        .half-c{
-          width: 100%;
-          height: 140px;
-          background: #00C1B3;
+        width: 27%;
+        .item{
+            float: left;
+            width: 33%;
+            padding: 10px;
+            .half-c{
+                width: 100%;
+                height: 140px;
+                background: #00C1B3;
+            }
         }
-      }
 
     }
 }
 
 #index-page{
+    position: relative;
+    z-index: 10;
     color: @gray;
-    .content{
-        width: 90%;
+    &.content{
+        width: 95%;
         margin: 0 auto;
     }
     .contentLeft{
@@ -462,6 +466,32 @@ body {
     }
 }
 
+.search-pan{
+    height: 40px;
+    position: absolute;
+    top: -40px;
+    .sp-input{
+        color: #026c96;
+        border: 1px solid #264c7b;
+        font-size: 12px;
+        padding-left: 8px;
+        width: 237px;
+        height: 36px;
+        background: #0b2644;
+        outline: none;
+    }
+    &>button{
+        background: #12457c;
+        outline: none;
+        height: 24px;
+        width: 52px;
+        text-align: center;
+        color: #2bb1e6;
+        border: none;
+        font-size: 12px;
+        cursor: pointer;
+    }
+}
 div.special-border{
     margin-bottom:10px;
     position: relative;

@@ -1,5 +1,14 @@
 $(function () {
     var $body = $("body");
+
+    var w_height = $body.height();
+    var w_width =$body.width();
+
+
+
+    $('.sidebar').css('height',w_height-250);
+    $('.search-pan').css('left',(w_width-331)/2-200);
+
     var pie1 = echarts.init($('.pie1').get(0));
 
     var table_btn = $('.table').find('.icon');
