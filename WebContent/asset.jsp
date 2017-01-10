@@ -219,11 +219,11 @@
 									<ul class="">
 										<li class="clearfix">
 											<p class="fl">ip总数</p>
-											<em class="fr yello">674</em>
+											<em class="fr yello" id="ip_total">674</em>
 										</li>
 										<li class="clearfix">
-											<p class="fl">ip总数</p>
-											<em class="fr yello">674</em>
+											<p class="fl">网站总数</p>
+											<em class="fr yello" id="i_total">674</em>
 										</li>
 									</ul>
 								</div>
@@ -238,17 +238,13 @@
 							<span class="br"></span>
 							<div class="styleLandR clearfix">
 								<h5>
-									<p class="orange">探测总数</p>
+									<p class="orange">资产总数</p>
 								</h5>
 								<div class="styleLandR_right">
 								<ul class="">
 									<li class="clearfix">
 										<p class="fl">ip总数</p>
-										<em class="fr orange">674</em>
-									</li>
-									<li class="clearfix">
-										<p class="fl">ip总数</p>
-										<em class="fr orange">674</em>
+										<em class="fr orange" id="s_total">674</em>
 									</li>
 								</ul>
 								</div>
@@ -271,7 +267,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr class="nodata">
+										<tr class="nodata" id="asset_areas">
 											<td colspan="100">没有发现资产</td>
 										</tr>
 									</tbody>
@@ -295,7 +291,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr class="nodata">
+										<tr class="nodata" id="asset_users">
 											<td colspan="100">没有发现资产</td>
 										</tr>
 									</tbody>
@@ -318,7 +314,7 @@
 											<td>频率</td>
 										</tr>
 									</thead>
-									<tbody>
+									<tbody id="asset_tags">
 										<tr>
 											<td>jQuery</td>
 											<td>277</td>
@@ -352,7 +348,7 @@
 									</tbody>
 								</table>
 								<div class="table-footer">
-									<h6>从1条到10条的记录 总显示记录数为72条</h6>
+									<h6>从1条到10条的记录 总显示记录数为<span id="total_count">72</span>条</h6>
 									<div class="pageWrap clearfix">
 										<ul class="fr" id="page1">
 											<li class="page prev"><</li>
