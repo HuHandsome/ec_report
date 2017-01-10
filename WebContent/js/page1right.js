@@ -19,8 +19,10 @@ $(function(){
 		});
 		ul.html(li);
 	});
-	
+	//列表
 	showLeftTable("255");
+	//K线
+	kLine();
 });
 
 /**
@@ -147,4 +149,62 @@ function initPage(doc, totalSize, pageSize, pageNum, clickName){
 	}
 	lis += "<li class='page next' start='" + ((pageNum + 1) * pageSize) + "' onclick='"+clickName+"'>></li>";
 	doc.html(lis);
+}
+
+/**
+ * 折线图
+ * @returns
+ */
+function kLine(){
+	var param = new Object();
+	param.cid = '255';
+	$.post("http://localhost:8080/ec_ui/rest/asset/intface11", param, function(data){
+		var line1x = new Array();
+		var line1y = new Array();
+		
+		data = JSON.parse(data);
+		
+		$.each(data.data, function(i,e){
+			line1x.push(e.t);
+			line1y.push(parseInt(e.speed.replace('ms','')));
+		});
+		
+		var line1option = {
+	            tooltip: {
+	                trigger: 'axis'
+	            },
+	            grid: {
+	                left: '3%',
+	                right: '4%',
+	                bottom: '3%',
+	                containLabel: true
+	            },
+	            xAxis: [
+	                {
+	                    type: 'category',
+	                    boundaryGap: false,
+	                    axisTick: {
+	                        interval: 10
+	                    },
+	                    data: line1x
+	                }
+	            ],
+	            yAxis: [
+	                {
+	                    type: 'value'
+	                }
+	            ],
+	            series: [
+	                {
+	                    name: '邮件营销',
+	                    type: 'line',
+	                    stack: '总量',
+	                    areaStyle: {normal: {}},
+	                    data: line1y
+	                }
+	            ]
+	        };
+		 var line1 = echarts.init($('.top-charts-c').get(0));
+	     line1.setOption(line1option);
+	});
 }
