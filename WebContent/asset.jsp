@@ -89,9 +89,6 @@
 				<div class="search-pan">
 					<span class="glyphicon glyphicon-search"></span>
 					<input class="sp-input" type="text" placeholder="搜索内容...">
-					<button>搜索</button>
-					<span>查询</span>
-					<input class="sp-input" type="text">
 					<button onclick='search()'>搜索</button>
 				</div>
 				<div class="row">
