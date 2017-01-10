@@ -19,6 +19,7 @@
 		<script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/common_top.js"></script>
+		<script type="text/javascript" src="js/index_temp.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
