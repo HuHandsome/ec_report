@@ -90,6 +90,9 @@
 					<span class="glyphicon glyphicon-search"></span>
 					<input class="sp-input" type="text" placeholder="搜索内容...">
 					<button>搜索</button>
+					<span>查询</span>
+					<input class="sp-input" type="text">
+					<button onclick='search()'>搜索</button>
 				</div>
 				<div class="row">
 					<h6>搜索结果：找到<span id="totalSize">910</span>条  耗时:<span>40</span>毫秒</h6>
