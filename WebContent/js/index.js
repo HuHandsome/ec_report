@@ -8,7 +8,6 @@ $(function () {
 
     $('.sidebar').css('height',w_height-250);
     $('.search-pan').css('left',(w_width-331)/2-200);
-
     var pie1 = echarts.init($('.pie1').get(0));
 
     var table_btn = $('.table').find('.icon');
@@ -269,7 +268,7 @@ $(function () {
         };
 
         line1.setOption(line1option);
-    //end
+        //end
     }
 
     //页头圆形表
@@ -404,7 +403,7 @@ $(function () {
                         value: 50,
                         itemStyle: {
                             normal: {
-                            	color: new echarts.graphic.LinearGradient(0, 0, 2, 1, [{
+                                color: new echarts.graphic.LinearGradient(0, 0, 2, 1, [{
                                     offset: 0, color: '#fd342d' // 0% 处的颜色
                                 }, {
                                     offset: 1, color: 'transparent' // 100% 处的颜色
