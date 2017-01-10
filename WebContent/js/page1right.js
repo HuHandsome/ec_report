@@ -30,6 +30,12 @@ function showLeftTable(str, li){
 	if(!isBlank(str)){
 		param.cid = str;
 	}
+	var pageNum = 1;
+	if(li != undefined){
+		param.rowStart = $(li).attr("start");
+		param.rowSize = 10;
+		pageNum = parseInt($(li).text());
+	}
 	var table = $(".table-c table tbody");
 	var tableStr = '<tr>' + 
 	 '<th></th>' + 
@@ -63,6 +69,7 @@ function showLeftTable(str, li){
 				'</tr>';
 		});
 		table.html(tableStr);
+		initPage($("#page1"), data.recordsTotal, 10, pageNum, "showLeftTable(255, this)");
 	});
 }
 
