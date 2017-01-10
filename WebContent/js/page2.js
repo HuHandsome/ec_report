@@ -12,7 +12,7 @@ $(function(){
 						'<p>更新时间：'+ e.tm +'</p>'+
 						'<p class="labelings">';
 			for(var j in e.tags){
-				li += '<span class="label">' + e.tags[i] +'</span>';
+				li += '<span class="label">' + e.tags[j] +'</span>';
 			}
 //			li += '</p>'+
 //					'</div>'+
