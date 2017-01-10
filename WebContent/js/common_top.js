@@ -305,7 +305,11 @@ $(function () {
                         value: 50,
                         itemStyle: {
                             normal: {
-                                color:'#fd342d',
+                            	color: new echarts.graphic.LinearGradient(0, 0, 2, 1, [{
+                                    offset: 0, color: '#fd342d' // 0% 处的颜色
+                                }, {
+                                    offset: 1, color: 'transparent' // 100% 处的颜色
+                                }], false),
                                 borderColor:'#198be4'
                             }
                         }
@@ -385,7 +389,7 @@ $(function () {
         ]
     };
 
-    $.post("http://127.0.0.1:8080/ec_report/rest/asset/intface1",function(result){
+    $.post("<%=basePath%>rest/asset/intface1",function(result){
 		var resultData = JSON.parse(result);
 		$("#count_asset").find('ul').empty();
 		var total = 0;
@@ -404,7 +408,7 @@ $(function () {
 		pie1.setOption(pie1option);
 	});
     
-	$.post("http://127.0.0.1:8080/ec_report/rest/asset/intface2",function(result){
+	$.post("<%=basePath%>rest/asset/intface2",function(result){
 		var resultData = JSON.parse(result);
 		var total = 0;
 		$.each(resultData.data, function(index, item) {
@@ -427,7 +431,7 @@ $(function () {
 	    });
 	});
 	
-	$.post("http://127.0.0.1:8080/ec_report/rest/asset/intface3",function(result){
+	$.post("<%=basePath%>rest/asset/intface3",function(result){
 		var resultData = JSON.parse(result);
 		var total = 0;
 		$.each(resultData.data, function(index, item) {

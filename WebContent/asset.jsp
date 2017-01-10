@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% 
+	String path = request.getContextPath(); 
+	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+%>  
+<html>
 	<head>
-		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>资产管理</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
 		<link type="text/css" rel="stylesheet" href="css/bootstrap-theme.min.css" />
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 		<link type="text/css" rel="stylesheet" href="css/base.css" />
