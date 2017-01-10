@@ -219,7 +219,7 @@ public class AssetController {
 		if(rowSize == null){
 			rowSize = 10;
 		}
-		param.put("qbase64", "kg==");
+		param.put("qbase64", "Kg==");
 		if(isExtra == null){
 			param.put("extra", "header");
 		}else{
@@ -258,7 +258,7 @@ public class AssetController {
 		}else{
 			param.put("extra", "body");
 		}
-		param.put("qbase64", "kg==");
+		param.put("qbase64", "Kg==");
 		param.put("start", rowStart + "");
 		param.put("length", rowSize + "");
 		if(StringUtils.isNoneBlank(tmStart) && StringUtils.isNoneBlank(tmEnd)){
