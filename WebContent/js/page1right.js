@@ -20,7 +20,7 @@ $(function(){
 		ul.html(li);
 	});
 	
-	showLeftTable(10);
+	showLeftTable(255);
 });
 
 
@@ -98,9 +98,4 @@ function formatDate(date,fmt)
     if(new RegExp("("+ k +")").test(fmt))   
   fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));   
   return fmt;   
-}
-
-//转义json
-function formatJSON(json){
-	
 }
