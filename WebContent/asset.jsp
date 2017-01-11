@@ -231,7 +231,7 @@
 						</div>
 						<!--pbox end-->
 						<!--pbox start-->
-						<div class="p-box" style="height: 180px;">
+						<div class="p-box special-border" style="height: 180px;">
 							<span class="tl"></span>
 							<span class="tr"></span>
 							<span class="bl"></span>
@@ -253,7 +253,7 @@
 						</div>
 						<!--pbox end-->
 						<!--styleTandB start-->
-						<div class="p-box" style="height:100px;">
+						<div class="p-box special-border" style="height:100px;">
 							<span class="tl"></span>
 							<span class="tr"></span>
 							<span class="bl"></span>
@@ -277,7 +277,7 @@
 						</div>
 						<!--styleTandB end-->
 						<!--styleTandB start-->
-						<div class="p-box" style="height:100px;">
+						<div class="p-box special-border" style="height:100px;">
 							<span class="tl"></span>
 							<span class="tr"></span>
 							<span class="bl"></span>
@@ -301,7 +301,7 @@
 						</div>
 						<!--styleTandB end-->
 						<!--styleTandB start-->
-						<div class="p-box" style="height:300px;">
+						<div class="p-box special-border" style="height:300px;">
 							<span class="tl"></span>
 							<span class="tr"></span>
 							<span class="bl"></span>
