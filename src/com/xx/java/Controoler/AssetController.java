@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -27,7 +30,19 @@ public class AssetController {
 	public String hello(Model model) {
 		return "index";
 	}
-
+	
+	@RequestMapping("/query")
+	@ResponseBody
+	public String query(HttpServletRequest request) throws HttpException, IOException{
+		Map<String, String> param = new HashMap<String, String>();
+		while (request.getParameterNames().hasMoreElements()) {
+			String key = request.getParameterNames().nextElement();
+			param.put(key, request.getParameter(key));
+		}
+		String result = RequestUtils.callHttp(path, param);
+		return result;
+	}
+	
 	/**
 	 * 接口1 头部基础数据
 	 * 

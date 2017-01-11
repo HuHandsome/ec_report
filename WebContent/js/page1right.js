@@ -1,8 +1,15 @@
 $(function(){
 	//右边列表
 	var ul = $("#table2");
+	var param = new Object();
+	param.queryid = "2360c1b2-13f1-4906-aa38-48108c4ccbc8";
+	param.cid = "";
+	param.start = "";
+	param.length = "";
+	param.tmStart = "";
+	param.tmEnd = "";
 	
-	$.post("/ec_ui/rest/asset/intface6",function(data){
+	$.post("/rest/asset/query", param, function(data){
 		var li = "";
 		data = JSON.parse(data);
 		$.each(data.data, function(i,e){
@@ -39,13 +46,16 @@ function search(){
 //左下查询列表
 function showLeftTable(str, li){
 	var param = new Object();
+	param.queryid = "2360c1b2-13f1-4906-aa38-48108c4ccbc8";
+	param.tmStart = "";
+	param.tmEnd = "";
 	if(!isBlank(str)){
 		param.cid = str;
 	}
 	var pageNum = 1;
 	if(li != undefined){
-		param.rowStart = $(li).attr("start");
-		param.rowSize = 10;
+		param.start = $(li).attr("start");
+		param.length = 10;
 		pageNum = parseInt($(li).text());
 	}
 	var table = $(".table-c table tbody");
@@ -58,7 +68,7 @@ function showLeftTable(str, li){
 	 '<th>探测时间</th>' + 
 	 '<th>异常等级</th>' + 
 	 '</tr>';
-	$.post("/ec_ui/rest/asset/intface11", param, function(data){
+	$.post("/rest/asset/query", param, function(data){
 		data = JSON.parse(data);
 		$.each(data.data, function(i,e){
 			tableStr += '<tr>' +
@@ -171,8 +181,13 @@ function initPage(doc, totalSize, pageSize, pageNum, clickName){
  */
 function kLine(){
 	var param = new Object();
+	param.queryid = "023ba092-4170-4c72-a936-e3efb09ebbd4";
+	//param.start = "";
+	//param.length = "";
+	//param.tmStart = "";
+	//param.tmEnd = "";
 	param.cid = '255';
-	$.post("/ec_ui/rest/asset/intface11", param, function(data){
+	$.post("/rest/asset/query", param, function(data){
 		var line1x = new Array();
 		var line1y = new Array();
 		

@@ -17,11 +17,14 @@ function showIntface8(li){
 	var param = new Object();
 	var pageNum = 1;
 	if(li != undefined){
-		param.rowStart = $(li).attr("start");
-		param.rowSize = 10;
+		param.start = $(li).attr("start");
+		param.length = 10;
 		pageNum = parseInt($(li).text());
 	}
-	$.post("/ec_ui/rest/asset/intface8?isExtra=true", param, function(data){
+	param.queryid = "83897eb4-7b57-432b-a20d-05aa87dc57ef";
+	param.extra = "body";
+	
+	$.post("/rest/asset/query", param, function(data){
 		var list = $("#list");
 		var li = "";
 		data = JSON.parse(data);
