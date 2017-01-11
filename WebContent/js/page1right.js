@@ -2,7 +2,7 @@ $(function(){
 	//右边列表
 	var ul = $("#table2");
 	
-	$.post("http://localhost:8080/ec_ui/rest/asset/intface6",function(data){
+	$.post("/ec_ui/rest/asset/intface6",function(data){
 		var li = "";
 		data = JSON.parse(data);
 		$.each(data.data, function(i,e){
@@ -58,7 +58,7 @@ function showLeftTable(str, li){
 	 '<th>探测时间</th>' + 
 	 '<th>异常等级</th>' + 
 	 '</tr>';
-	$.post("http://localhost:8080/ec_ui/rest/asset/intface11", param, function(data){
+	$.post("/ec_ui/rest/asset/intface11", param, function(data){
 		data = JSON.parse(data);
 		$.each(data.data, function(i,e){
 			tableStr += '<tr>' +
@@ -172,7 +172,7 @@ function initPage(doc, totalSize, pageSize, pageNum, clickName){
 function kLine(){
 	var param = new Object();
 	param.cid = '255';
-	$.post("http://localhost:8080/ec_ui/rest/asset/intface11", param, function(data){
+	$.post("/ec_ui/rest/asset/intface11", param, function(data){
 		var line1x = new Array();
 		var line1y = new Array();
 		
