@@ -65,9 +65,9 @@
                     </div>
                     <div class="last-part header-part">
 						<div class="item">
-						<div id="half0" class="half-c" data-name="所有资产" data-num="80" >
+							<div id="half0" class="half-c" data-name="所有资产" data-num="80" >
 
-						</div>
+							</div>
 						</div>
 						<div class="item">
 							<div id="half1" class="half-c" data-name="所有资产" data-num="50" >
@@ -89,7 +89,7 @@
 					<button>搜索</button>
 				</div>
 				<div class="row">
-					<div class="col-md-9 contentLeft">
+					<div class="col-md-9 col-xs-12 contentLeft">
 						<div class="top-charts special-border">
 							<span class="tl"></span>
 							<span class="tr"></span>
@@ -198,7 +198,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 contentRight">
+					<div class="col-md-3 col-xs-12 contentRight">
 						<div class="sidebar special-border">
 							<span class="tl"></span>
 							<span class="tr"></span>
