@@ -243,8 +243,9 @@
 								<div class="styleLandR_right">
 								<ul class="">
 									<li class="clearfix">
-										<p class="fl">ip总数</p>
+										<p >操作系统、中间</p>
 										<em class="fr orange" id="s_total">674</em>
+										<p >件、建站组件等</p>
 									</li>
 								</ul>
 								</div>
