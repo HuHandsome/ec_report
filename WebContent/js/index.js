@@ -2,12 +2,11 @@ $(function () {
     var $body = $("body");
 
     var w_height = $body.height();
-    var w_width =$body.width();
-
-
 
     $('.sidebar').css('height',w_height-250);
-    $('.search-pan').css('left',(w_width-331)/2-200);
+
+    var ec_arr = [];
+
     var pie1 = echarts.init($('.pie1').get(0));
 
     var table_btn = $('.table').find('.icon');
@@ -24,6 +23,8 @@ $(function () {
         hide.toggleClass('hide');
 
     });
+
+
 
     // 指定图表的配置项和数据
     var pie1option = {
@@ -209,6 +210,7 @@ $(function () {
     // 使用刚指定的配置项和数据显示图表。
     pie1.setOption(pie1option);
 
+    ec_arr.push(pie1);
 
     //主页中间线表
 
@@ -268,6 +270,8 @@ $(function () {
         };
 
         line1.setOption(line1option);
+
+        ec_arr.push(line1);
         //end
     }
 
@@ -376,6 +380,7 @@ $(function () {
         c1option.series[0].data[0].value = n;
         c1option.series[0].data[1].value = 100 - n;
         c.setOption(c1option);
+        ec_arr.push(c);
     });
 
 
@@ -486,9 +491,7 @@ $(function () {
             }
         ]
     };
-
     var harr = $('.half-c');
-
     $.each(harr,function(k,v){
         var h = echarts.init(v);
         var n = parseInt($(v).attr('data-num'));
@@ -497,6 +500,11 @@ $(function () {
         hoption.series[0].data[0].value = n*0.8;
         hoption.series[0].data[1].value = 80 - n*0.8;
         h.setOption(hoption);
-    })
-
+        ec_arr.push(h);
+    });
+    $(window).resize(function(){
+        $.each(ec_arr,function(k,v){
+            v.resize();
+        });
+    });
 });
