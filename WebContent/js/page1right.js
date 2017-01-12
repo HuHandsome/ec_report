@@ -3,7 +3,7 @@ $(function(){
 	var ul = $("#table2");
 	var param = new Object();
 	param.queryid = "2360c1b2-13f1-4906-aa38-48108c4ccbc8";
-	param.cid = "";
+	param.cid = "255";
 	param.start = "";
 	param.length = "";
 	param.tmStart = "";
@@ -52,9 +52,7 @@ function showLeftTable(str, li){
 	param.queryid = "2360c1b2-13f1-4906-aa38-48108c4ccbc8";
 	param.tmStart = "";
 	param.tmEnd = "";
-	if(!isBlank(str)){
-		param.cid = str;
-	}
+	param.cid = str;
 	var pageNum = 1;
 	if(li != undefined){
 		param.start = $(li).attr("start");
