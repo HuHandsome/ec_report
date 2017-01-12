@@ -282,7 +282,7 @@ $(function () {
         series: [
             {
                 type: 'pie',
-                radius: ['80%', '90%'],
+                radius: ['90%', '100%'],
                 clockwise: false,
                 silent: true,
                 label: {
@@ -322,7 +322,7 @@ $(function () {
             {
                 name: '问题资产',
                 type: 'pie',
-                radius: ['0', '70%'],
+                radius: ['0', '80%'],
                 clockwise: false,
                 silent: true,
                 label: {
@@ -389,7 +389,7 @@ $(function () {
         series: [
             {
                 type: 'pie',
-                radius: ['60%', '80%'],
+                radius: ['70%', '90%'],
                 startAngle:233,
                 silent: true,
                 label: {
@@ -443,7 +443,7 @@ $(function () {
             {
                 name: '问题资产',
                 type: 'pie',
-                radius: ['0', '50%'],
+                radius: ['0', '60%'],
                 silent: true,
                 label: {
                     normal: {
