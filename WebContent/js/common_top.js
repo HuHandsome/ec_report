@@ -388,8 +388,10 @@ $(function () {
             }
         ]
     };
-
-    $.post("rest/asset/intface1",function(result){
+    
+	var param = new Object();
+	param.queryid = "face5001-dd5f-4492-ae64-e08e971bed2d";
+    $.post("rest/asset/query", param, function(result){
 		var resultData = JSON.parse(result);
 		$("#count_asset").find('ul').empty();
 		var total = 0;
@@ -408,7 +410,9 @@ $(function () {
 		pie1.setOption(pie1option);
 	});
     
-	$.post("rest/asset/intface2",function(result){
+    var param = new Object();
+	param.queryid = "f4449cc4-e9c4-4f14-9a58-c2be3e6a618f";
+	$.post("rest/asset/query", param, function(result){
 		var resultData = JSON.parse(result);
 		var total = 0;
 		$.each(resultData.data, function(index, item) {
@@ -431,7 +435,9 @@ $(function () {
 	    });
 	});
 	
-	$.post("rest/asset/intface3",function(result){
+	var param = new Object();
+	param.queryid = "23286c2b-c1ce-46ec-893b-c5232948b29f";
+	$.post("rest/asset/query", param, function(result){
 		var resultData = JSON.parse(result);
 		var total = 0;
 		$.each(resultData.data, function(index, item) {

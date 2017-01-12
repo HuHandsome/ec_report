@@ -401,7 +401,10 @@
 		initPage($("#page1"), tags_data.length, 10, pageNum, "showIntface(this)");
 	}
 	
-	$.post("rest/asset/intface9",function(result){
+	var param = new Object();
+	param.queryid = "2a72e7d9-4fce-4025-a498-3783d286b15a";
+	param.qbase64 = "Kg==";
+	$.post("rest/asset/query", param, function(result){
 		var resultData = JSON.parse(result);
 		var total_ip = resultData.totalIP;
 		var total_i = resultData.total;
