@@ -1,4 +1,5 @@
 $(function () {
+	alert(baseUrl);
 	var pie1 = echarts.init($('.pie1').get(0));
 	// 指定图表的配置项和数据
     var pie1option = {
@@ -181,7 +182,7 @@ $(function () {
         series: [
             {
                 type: 'pie',
-                radius: ['80%', '90%'],
+                radius: ['90%', '100%'],
                 clockwise: false,
                 silent: true,
                 label: {
@@ -221,7 +222,7 @@ $(function () {
             {
                 name: '问题资产',
                 type: 'pie',
-                radius: ['0', '70%'],
+                radius: ['0', '80%'],
                 clockwise: false,
                 silent: true,
                 label: {
@@ -286,7 +287,7 @@ $(function () {
         series: [
             {
                 type: 'pie',
-                radius: ['60%', '80%'],
+                radius: ['80%', '100%'],
                 startAngle:233,
                 silent: true,
                 label: {
@@ -340,7 +341,7 @@ $(function () {
             {
                 name: '问题资产',
                 type: 'pie',
-                radius: ['0', '50%'],
+                radius: ['0', '70%'],
                 silent: true,
                 label: {
                     normal: {
@@ -388,8 +389,10 @@ $(function () {
             }
         ]
     };
-
-    $.post("rest/asset/intface1",function(result){
+    
+	var param = new Object();
+	param.queryid = "face5001-dd5f-4492-ae64-e08e971bed2d";
+    $.post(baseUrl, param, function(result){
 		var resultData = JSON.parse(result);
 		$("#count_asset").find('ul').empty();
 		var total = 0;
@@ -408,7 +411,9 @@ $(function () {
 		pie1.setOption(pie1option);
 	});
     
-	$.post("rest/asset/intface2",function(result){
+    var param = new Object();
+	param.queryid = "f4449cc4-e9c4-4f14-9a58-c2be3e6a618f";
+	$.post(baseUrl, param, function(result){
 		var resultData = JSON.parse(result);
 		var total = 0;
 		$.each(resultData.data, function(index, item) {
@@ -431,7 +436,9 @@ $(function () {
 	    });
 	});
 	
-	$.post("rest/asset/intface3",function(result){
+	var param = new Object();
+	param.queryid = "23286c2b-c1ce-46ec-893b-c5232948b29f";
+	$.post(baseUrl, param, function(result){
 		var resultData = JSON.parse(result);
 		var total = 0;
 		$.each(resultData.data, function(index, item) {
