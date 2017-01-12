@@ -9,7 +9,7 @@ $(function(){
 	param.tmStart = "";
 	param.tmEnd = "";
 	
-	$.post("rest/asset/query", param, function(data){
+	$.post(baseUrl, param, function(data){
 		var li = "";
 		data = JSON.parse(data);
 		$.each(data.data, function(i,e){
@@ -69,7 +69,7 @@ function showLeftTable(str, li){
 	 '<th>探测时间</th>' + 
 	 '<th>异常等级</th>' + 
 	 '</tr>';
-	$.post("rest/asset/query", param, function(data){
+	$.post(baseUrl, param, function(data){
 		data = JSON.parse(data);
 		$.each(data.data, function(i,e){
 			tableStr += '<tr>' +
@@ -188,7 +188,7 @@ function kLine(){
 	//param.tmStart = "";
 	//param.tmEnd = "";
 	param.cid = '255';
-	$.post("rest/asset/query", param, function(data){
+	$.post(baseUrl, param, function(data){
 		var line1x = new Array();
 		var line1y = new Array();
 		
