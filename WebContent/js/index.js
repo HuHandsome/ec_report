@@ -3,7 +3,7 @@ $(function () {
 
     var w_height = $body.height();
 
-    $('.sidebar').css('height',w_height-250);
+    $('.sidebar').css('height', w_height - 250);
 
     var ec_arr = [];
 
@@ -23,7 +23,6 @@ $(function () {
         hide.toggleClass('hide');
 
     });
-
 
 
     // 指定图表的配置项和数据
@@ -214,7 +213,7 @@ $(function () {
 
     //主页中间线表
 
-    if($('.top-charts-c').length>0){
+    if ($('.top-charts-c').length > 0) {
         var line1 = echarts.init($('.top-charts-c').get(0));
 
         var line1x = function (a) {
@@ -282,7 +281,7 @@ $(function () {
         series: [
             {
                 type: 'pie',
-                radius: ['90%', '100%'],
+                radius: ['80%', '90%'],
                 clockwise: false,
                 silent: true,
                 label: {
@@ -322,7 +321,7 @@ $(function () {
             {
                 name: '问题资产',
                 type: 'pie',
-                radius: ['0', '80%'],
+                radius: ['0', '70%'],
                 clockwise: false,
                 silent: true,
                 label: {
@@ -389,8 +388,8 @@ $(function () {
         series: [
             {
                 type: 'pie',
-                radius: ['70%', '90%'],
-                startAngle:233,
+                radius: ['80%', '100%'],
+                startAngle: 233,
                 silent: true,
                 label: {
                     normal: {
@@ -413,16 +412,16 @@ $(function () {
                                 }, {
                                     offset: 1, color: 'transparent' // 100% 处的颜色
                                 }], false),
-                                borderColor:'#198be4'
+                                borderColor: '#198be4'
                             }
                         }
                     },
                     {
-                        value:30,
+                        value: 30,
                         itemStyle: {
                             normal: {
-                                color:'transparent',
-                                borderColor:'#198be4'
+                                color: 'transparent',
+                                borderColor: '#198be4'
                             }
                         }
                     },
@@ -443,7 +442,7 @@ $(function () {
             {
                 name: '问题资产',
                 type: 'pie',
-                radius: ['0', '60%'],
+                radius: ['0', '67%'],
                 silent: true,
                 label: {
                     normal: {
@@ -492,18 +491,18 @@ $(function () {
         ]
     };
     var harr = $('.half-c');
-    $.each(harr,function(k,v){
+    $.each(harr, function (k, v) {
         var h = echarts.init(v);
         var n = parseInt($(v).attr('data-num'));
         hoption.series[1].name = $(v).attr('data-name');
         hoption.series[1].data[0].name = $(v).attr('data-name');
-        hoption.series[0].data[0].value = n*0.8;
-        hoption.series[0].data[1].value = 80 - n*0.8;
+        hoption.series[0].data[0].value = n * 0.8;
+        hoption.series[0].data[1].value = 80 - n * 0.8;
         h.setOption(hoption);
         ec_arr.push(h);
     });
-    $(window).resize(function(){
-        $.each(ec_arr,function(k,v){
+    $(window).resize(function () {
+        $.each(ec_arr, function (k, v) {
             v.resize();
         });
     });
