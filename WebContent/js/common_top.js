@@ -1,5 +1,4 @@
 $(function () {
-	alert(baseUrl);
 	var pie1 = echarts.init($('.pie1').get(0));
 	// 指定图表的配置项和数据
     var pie1option = {
