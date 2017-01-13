@@ -4,10 +4,10 @@ $(function(){
 	var param = new Object();
 	param.queryid = "2360c1b2-13f1-4906-aa38-48108c4ccbc8";
 	param.cid = "255";
-	param.start = "";
-	param.length = "";
-	param.tmStart = "";
-	param.tmEnd = "";
+//	param.start = "";
+//	param.length = "";
+//	param.tmStart = "";
+//	param.tmEnd = "";
 	
 	$.post(baseUrl, param, function(data){
 		var li = "";
@@ -49,9 +49,9 @@ function search(){
 //左下查询列表
 function showLeftTable(str, li){
 	var param = new Object();
-	param.queryid = "2360c1b2-13f1-4906-aa38-48108c4ccbc8";
-	param.tmStart = "";
-	param.tmEnd = "";
+	param.queryid = "023ba092-4170-4c72-a936-e3efb09ebbd4";
+//	param.tmStart = "";
+//	param.tmEnd = "";
 	param.cid = str;
 	var pageNum = 1;
 	if(li != undefined){
