@@ -55,7 +55,9 @@ function showIntface8(li){
 		
 		initPage($("#page1"), data.recordsTotal, 10, pageNum, "showIntface8(this)");
 	});
-}	
+}
+//定时刷新左边table
+setInterval(showIntface8());
 
 
 function formatDate(date,fmt)   

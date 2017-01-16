@@ -33,6 +33,10 @@ $(function(){
 	showLeftTable("255");
 	//K线
 	kLine();
+	//分页修改
+	$("#pageSize").change(function(){
+		showLeftTable("255", $("#page1 li:eq(1)"));
+	});
 });
 
 /**
@@ -42,7 +46,7 @@ $(function(){
 function search(){
 	var keyword = $("#keyword").val();
 	if(isBlank(keyword)){
-		showLeftTable();
+		showLeftTable(keyword);
 	}
 }
 
@@ -56,7 +60,7 @@ function showLeftTable(str, li){
 	var pageNum = 1;
 	if(li != undefined){
 		param.start = $(li).attr("start");
-		param.length = 10;
+		param.length = $("#pageSize").val();
 		pageNum = parseInt($(li).text());
 	}
 	var table = $(".table-c table tbody");
@@ -201,7 +205,10 @@ function kLine(){
 		
 		var line1option = {
 	            tooltip: {
-	                trigger: 'axis'
+	                trigger: 'axis',
+	                formatter : function(a){
+	                	return formatDate(new Date(a[0].name),"yyyy-MM-dd hh:mm:ss");
+	                }
 	            },
 	            grid: {
 	                left: '3%',
@@ -226,7 +233,7 @@ function kLine(){
 	            ],
 	            series: [
 	                {
-	                    name: '邮件营销',
+	                    name: '响应时间',
 	                    type: 'line',
 	                    stack: '总量',
 	                    areaStyle: {normal: {}},
