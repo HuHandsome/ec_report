@@ -57,7 +57,7 @@ function showIntface8(li){
 	});
 }
 //定时刷新左边table
-setInterval(showIntface8());
+setInterval(showIntface8(), 3000);
 
 
 function formatDate(date,fmt)   
