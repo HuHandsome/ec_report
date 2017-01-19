@@ -1,4 +1,13 @@
 $(function () {
+	showData();
+});
+
+/**
+ * 展示数据
+ * @returns
+ */
+function showData(){
+
 	var pie1 = echarts.init($('.pie1').get(0));
 	// 指定图表的配置项和数据
     var pie1option = {
@@ -459,4 +468,7 @@ $(function () {
 			h.setOption(hoption);
 		})
 	});
-});
+}
+
+//定时刷新左边table
+setInterval("showData()", 60 * 1000);

@@ -23,8 +23,9 @@ function showIntface8(li){
 	}
 	param.queryid = "83897eb4-7b57-432b-a20d-05aa87dc57ef";
 	param.extra = "body";
+	param.qbase64 = "kg==";
 	
-	$.post("/rest/asset/query", param, function(data){
+	$.post(baseUrl, param, function(data){
 		var list = $("#list");
 		var li = "";
 		data = JSON.parse(data);
@@ -57,7 +58,7 @@ function showIntface8(li){
 	});
 }
 //定时刷新左边table
-setInterval(showIntface8(), 3000);
+setInterval("showIntface8()", 3000);
 
 
 function formatDate(date,fmt)   
