@@ -22,24 +22,30 @@ function showIntface8(li){
 		pageNum = parseInt($(li).text());
 	}
 	param.queryid = "83897eb4-7b57-432b-a20d-05aa87dc57ef";
-	param.extra = "body";
-	param.qbase64 = "kg==";
+	param.extra = "header";
+	param.qbase64 = "Kg==";
 	
 	$.post(baseUrl, param, function(data){
 		var list = $("#list");
 		var li = "";
 		data = JSON.parse(data);
 		$("#totalSize").text(data.recordsTotal);
+		var count = 0;
 		$.each(data.data, function(i,e){
+			count ++;
+			if(count >= 7){return}
 			li += '<li class="col-md-12">'+
 							'<div class="col-md-6">'+
 						'<p><img src=" img/icon_ip.png" />'+ e.url+'</p>'+
 						'<p class="relationIp">'+ e.ip+'<a>关联网站</a></p>'+
-						'<p>更新时间：'+ e.tm +'</p>'+
-						'<p class="labelings">';
+						'<p>更新时间：'+ e.tm +'</p>';
+			li += '<p class="labelings">';
 			for(var j in e.tags){
 				li += '<span class="label">' + e.tags[j] +'</span>';
 			}
+			li += '</p></div>';
+			
+			li += '<div class="col-md-6 ">'+e.header+'</div>';
 //			li += '</p>'+
 //					'</div>'+
 //					'<div class="col-md-6 ">'+
